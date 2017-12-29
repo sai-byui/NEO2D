@@ -147,7 +147,7 @@ class MapBuilder(Agent):
 
 
     def insert_objects(self):
-        test_object = Object('apple', 'red', 1, 350, 300, 'apple.png')
+        test_object = Object('apple', 'red', 1, 450, 375, 'apple.png')
         self.object_list.add(test_object)
 
 

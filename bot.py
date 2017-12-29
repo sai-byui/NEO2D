@@ -22,7 +22,7 @@ class Bot(pygame.sprite.Sprite):
         self.dy = -1
 
         # time between bullet shots in milliseconds
-        self.reload_time = 800
+        self.reload_time = 100
         self.last_shot_time = pygame.time.get_ticks()
 
     def reloaded(self):

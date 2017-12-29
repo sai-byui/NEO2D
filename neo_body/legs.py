@@ -14,7 +14,7 @@ class Legs(Agent):
         # self.position = self.ask("neo", "position")
 
     def rotate(self):
-        self.angle += .5
+        self.angle += 1
         key = pygame.key.get_pressed()
         if key[pygame.K_LEFT]:
             self.angle += 4
