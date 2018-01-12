@@ -5,7 +5,7 @@ PHRASE_TIME_LIMIT = 4.0 # each phrase will run 4 seconds before the microphone s
 
 # This is where we can put our verbal keywords commands
 # all words must be lower case to be recognized
-KEYWORDS = (("hello neo", .3), ("walk forward", .3), ("good evening neo", .3), )
+KEYWORDS = (("hello neo", .3), ("walk forward", .3), ("good evening mister anderson", .3), )
 
 
 """ Syntax notes for important SpeechRecognition functions

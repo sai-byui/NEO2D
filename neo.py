@@ -3,7 +3,7 @@ from enum import Enum
 import _thread
 import pygame
 
-from neo_body.ears import Ears
+# from neo_body.ears import Ears
 from neo_body.eyes import Eyes
 from neo_body.hands import Hands
 from neo_body.memory import Memory
