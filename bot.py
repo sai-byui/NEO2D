@@ -5,6 +5,7 @@ from raycast import RayCaster
 
 
 class Bot(pygame.sprite.Sprite):
+    """ the physical representation of NEO's body. Performs the physcial tasks such as walking and picking up objects"""
 
     def __init__(self):
         super(Bot, self).__init__()

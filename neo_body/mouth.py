@@ -10,7 +10,7 @@ class Mouth(Agent):
         """default constructor"""
         super(Mouth, self).__init__("mouth")
         self.engine = pyttsx3.init()
-        self.engine.setProperty('rate', 150) # 150 words per minute
+        self.engine.setProperty('rate', 150)  # 150 words per minute
         self.engine.setProperty('volume', 0.9)
         self.engine.say("HELLO WORLD, my name is neo!")
         self.engine.runAndWait()

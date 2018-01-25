@@ -6,7 +6,10 @@ from game_manager import GameManager
 
 
 class MainManager(Agent):
-    """The main driver class of the program and the top of the manager hierarchy"""
+    """The main driver class of the program and the top of the manager hierarchy
+
+    Run this python file to run the program!
+    """
 
     def __init__(self):
         """default constructor"""

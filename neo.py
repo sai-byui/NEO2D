@@ -18,8 +18,8 @@ from pathfinder import Pathfinder
 from agent import Agent
 
 
-RECTANGLE_STARTING_X = 550
-RECTANGLE_STARTING_Y = 200
+NEO_STARTING_X = 550
+NEO_STARTING_Y = 200
 MARGIN = 48
 
 RED = (255, 0, 0)
@@ -28,9 +28,16 @@ RED = (255, 0, 0)
 class NEO(Agent):
     """Controls the behaviors of the NEO bot
 
-    NEO's decisions are based on its current_behavior state. The state is determined by the conditions of its
-    environment. A full list of behaviors can be found at the bottom of this module in the
-    PilotAgentBehavior class."""
+    NEO has four main tasks:
+    1. scan the room for new objects,
+    2. approach discovered objects,
+    3. inspect objects and gather info about their attributes,
+    4. accept queries from the user to test its memory of objects.
+
+    NEO performs these tasks by using the various body part classes located in the neo_body directory. This NEO
+    class essentially serves as the 'brain' class and passes commands to all other body parts as needed. NEO and every
+    body part class are subclasses of the Agent class, which allows them to safely share info with each other using
+    Agent Oriented Programming methods. This allows us to easily add new parts or replace parts altogether."""
 
     def __init__(self, environment=None):
         """sets up details about the red rectangle as well as variables for A.I. behavior"""
@@ -45,8 +52,8 @@ class NEO(Agent):
         self.original_image = self.bot.image.copy()
         self.angle = 90
         # set the starting position
-        self.bot.rect.x = RECTANGLE_STARTING_X
-        self.bot.rect.y = RECTANGLE_STARTING_Y
+        self.bot.rect.x = NEO_STARTING_X
+        self.bot.rect.y = NEO_STARTING_Y
         # place the coordinates of our rectangle in a tuple to update the game manager
         self.red_coordinate = (self.bot.rect.x, self.bot.rect.y)
         self.rect = self.bot.rect

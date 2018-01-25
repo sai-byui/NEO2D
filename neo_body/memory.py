@@ -6,7 +6,11 @@ from agent import Agent
 
 
 class Memory(Agent):
-    """Keeps track of objects NEO has interacted with and their associations based on attributes"""
+    """Keeps track of objects NEO has interacted with and their associations based on attributes using a SQLITE DB.
+
+    NEO has three main tables: objects, adjectives, and a linking table between them. objects hold names of the objects
+    that NEO interacts with. Adjectives hold descriptive words and what category that adjective belongs to (ex. 'red' is
+    a category of color). The linking table allows NEO to associate objects with their attributes."""
 
     def __init__(self):
         """default constructor"""
@@ -27,6 +31,7 @@ class Memory(Agent):
         self.store_object_info()
 
     def store_object_info(self):
+        """stores the object into memory and links the object to any attributes that the object has"""
         conn = sqlite3.connect('neo_test.db')
 
         cursor = conn.cursor()
@@ -38,9 +43,10 @@ class Memory(Agent):
         # insert the color into the adjective table
         cursor.execute("INSERT OR IGNORE INTO ADJECTIVES (adjective_name, category) VALUES (:name, 'color')",
                        {'name': self.current_object_color})
+        # get the id of the adjective so we can link it to the object in the linking table
         cursor.execute("SELECT adjective_id FROM ADJECTIVES WHERE adjective_name = ?", (self.current_object_color,))
         adjective_id = cursor.fetchone()[0]
-
+        # get the id of the object so we can link it to the object in the linking table
         cursor.execute("SELECT object_id FROM OBJECTS WHERE object_name = ?", (self.current_object_name,))
         object_id = cursor.fetchone()[0]
 
@@ -60,6 +66,8 @@ class Memory(Agent):
 
 
     def create_object_memory(self):
+        """creates neo's DB tables the first time neo is initialized or in the event that the DB file is not found"""
+
         if not os.path.isfile('./neo_test.db'):
             conn = sqlite3.connect('neo_test.db')
 
@@ -97,6 +105,7 @@ class Memory(Agent):
             conn.close()
 
     def recall_objects(self):
+        """uses the sql statement created by the Wernicke Area class to recall object of a certain attribute"""
         statement = self.ask("neo", "sql_statement")
         conn = sqlite3.connect('neo_test.db')
 

@@ -2,32 +2,41 @@ from copy import deepcopy
 
 
 class Agent:
-    """The parent class of all agents
+    """The parent class of all agents, uses principle of Agent Oriented Programming to share information between Agents
 
-    The Agent Superclass sets the framework by which all agents can perform their tasks. An agent can be defined as a
-    class that contains all necessary data and methods to perform a unique set of tasks individually. Agent Oriented
-    Programming(AOP) is centered around all functions of a program being performed by agents which work together through
-    a hierarchy of managers and employees.
+    The Agent Superclass sets the framework which allows agents to ask each other for data. An agent can be defined as a
+    class that contains all necessary data and methods to perform a unique set of tasks individually, conceptually
+    similar to how a human performs tasks.
 
-    AOP seeks to model software development after how humans perform complex tasks in groups. Each individual in a group
-    has the understanding and skills to achieve their tasks independent of other coworkers. Just as we cannot directly
-    change the data within someone's mind, AOP develops data integrity by preventing agents changing the member
-    variables of one another unless they specifically ask for such information. If information is required by an
-    individual they can ask the other agent for said data and then update they information. This convention improves
-    modularity, scalability, and cohesion for each agent.
+    Agent Oriented Programming(AOP) seeks to model software development after how humans perform complex tasks in groups.
+    When we need information from one another, we simply 'ask' each other for the data. Similarly, any agent class is
+    able to ask another agent for any needed info. AOP does this through reflection, which allows agents to ask each other
+    for specific variables at runtime (ex. this line: self.object_color = self.ask("eyes", "visible_object_color"),
+    finds the variable named 'visible_object_color' within the 'eyes' agent class and returns that value).
+
+    This passing of data by 'asking' allows data to be safely transferred between classes and prevents variables being
+    changed when they shouldn't be. It also allows agents to call others functions and share data without requiring
+    dependencies in code, which makes it easier to switch agent classes in and out as needed.
+
+    It should be noted that AGENT CLASSES SHOULD ALWAYS BE STATIC. There should only be one instance of each
+    agent subclass ever created. Similar to how there is only one of you (hopefully), each agent should have only one
+    instance of itself in the program.
     """
 
     def __init__(self, agent_name, environment=None):
         """Assigns the agent it's name and environment based on passed parameters
 
-        When an agent is created it is added the the private agent_list member variable of this class. That list allows
+        When an agent is created it is added the the private agent_list dictionary of this class. That dictionary allows
         agents to gather data from one another by using the ask and share methods rather than requiring a dependency
         in code.
 
         Key variables:
-        environment: see the environment class. An environment defines what objects an agent has access to.
+        environment:
+        see the environment class. An environment defines what objects an agent has access to.
+        __agent_list:
+        a dictionary containing { agent_name: a string name of the agent => AgentObject: the actual instance of the agent}
         """
-        self.agent_name = agent_name
+        self.agent_name = agent_name # the name of the agent, used in the __
         if Agent.environment is None:
             Agent.environment = environment
         Agent.__agent_list[agent_name] = self

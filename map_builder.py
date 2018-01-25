@@ -49,7 +49,11 @@ class MapBuilder(Agent):
             x = 0
 
     def form_node_connections(self):
-        """goes through the 2d array to find any nodes that are not blocked by walls so connections can be formed"""
+        """goes through the 2d array to find any nodes that are not blocked by walls so connections can be formed.
+
+        When each node of the map is created, it is given an id number that corresponds to its physical location
+        on the map. For example the node in the top left corner would have an id number less than a node in the
+        bottom right. These id numbers allow us to mathematically link nodes together. """
 
         multidimensional_array_map = self.convert_map_to_2d_array()
         # for each node we check 8 directions (Top, Top Right, Right, etc.) for neighboring nodes to connect to.
@@ -103,7 +107,10 @@ class MapBuilder(Agent):
                         is_clear = False
                         break
                 if is_clear:
+                    # using math, we determine that the id of the node that is connected to this node has
+                    # the value of (current position + or - the direction we came from)
                     node_connection_number = (y + dy) * (self.screen_width / self.GRID_INCREMENT) + (x + dx)
+                    # print(node_connection_number)
                     node.connections.append(node_connection_number)
                 direction += 1
 
@@ -145,10 +152,9 @@ class MapBuilder(Agent):
             y += self.GRID_INCREMENT
             x = 0
 
-
     def insert_objects(self):
         test_object = Object('apple', 'red', 1, 450, 375, 'apple.png')
-        self.object_list.add(test_object)
+        self.object_list.add(test_object)  # insert test object into environment
 
 
 level_map = []
@@ -164,17 +170,18 @@ class Wall(pygame.sprite.Sprite):
         super(Wall, self).__init__()
         self.image = pygame.Surface([length, width])
         self.rect = pygame.Rect(x, y, length, width)
-        self.image.fill((255, 255, 255))
+        self.image.fill((255, 255, 255))  # this makes the blocks white
 
 
 class Node:
     """a data container that holds its x and y coordinates as well as a list of other nodes it is connected to"""
 
     def __init__(self, name, x, y, connections):
-        self.name = name
-        self.x = x
-        self.y = y
-        self.connections = []
+
+        self.name = name  # the id number of the node, used to identify each node when path finding
+        self.x = x  # the node's x coordinate
+        self.y = y  # the node's y coordinate
+        self.connections = []  # an integer array holding all the id numbers of nodes it is connected to
 
         # this variable keeps track of which node preceded it in our path
         self.previous_node = None
@@ -185,7 +192,7 @@ class Node:
 
         if connections is None:
             return
-
+        # if an array of connection numbers has been passed in, add them to our connection array
         for i in range(len(connections) - 1):
             self.connections += [connections[i]]
             print("connection: " + connections[i])
