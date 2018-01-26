@@ -7,7 +7,7 @@ import pygame
 from neo_body.eyes import Eyes
 from neo_body.hands import Hands
 from neo_body.memory import Memory
-from neo_body.mouth import Mouth
+# from neo_body.mouth import Mouth
 from neo_body.legs import Legs
 from neo_body.wernicke_area import Wernicke_Area
 
@@ -63,7 +63,7 @@ class NEO(Agent):
         self.hands = Hands()
         self.legs = Legs()
         self.memory = Memory()
-        self.mouth = Mouth()
+        # self.mouth = Mouth()
         # self.ears = Ears()
         self.wernicke_area = Wernicke_Area()
 
@@ -136,7 +136,7 @@ class NEO(Agent):
             self.legs.rotate()
             self.angle = self.ask("legs", "angle")
             self.eyes.scan_room()
-            _thread.start_new_thread(self.mouth.speak, ("Scanning Room",))
+            # _thread.start_new_thread(self.mouth.speak, ("Scanning Room",))
         elif self.current_behavior == BEHAVIOR_STATE.PATH_FINDING:
             self.path_course = self.pathfinder.find_path(self.object_coordinates)
             self.path_found = True
@@ -149,10 +149,10 @@ class NEO(Agent):
             self.find_next_node()
             self.move_to_next_node()
         elif self.current_behavior == BEHAVIOR_STATE.INSPECTING:
-            if not self.mouth.inspection_message_spoken:
-                self.mouth.stopSentence()
-                _thread.start_new_thread(self.mouth.speak, ("Inspecting Object",))
-                self.mouth.inspection_message_spoken = True
+            # if not self.mouth.inspection_message_spoken:
+            #     self.mouth.stopSentence()
+            #     _thread.start_new_thread(self.mouth.speak, ("Inspecting Object",))
+            #     self.mouth.inspection_message_spoken = True
             pass
 
 

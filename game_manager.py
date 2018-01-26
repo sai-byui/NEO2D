@@ -81,9 +81,9 @@ class GameManager(Agent):
     def check_object_ray_collision(self, bullet):
         for object in self.object_list:
             if bullet.rect.colliderect(object):
-                self.neo.mouth.stopSentence()
+                # self.neo.mouth.stopSentence()
                 sentence = object.name + " detected"
-                _thread.start_new_thread(self.neo.mouth.identify_detected_object, (sentence,))
+                # _thread.start_new_thread(self.neo.mouth.identify_detected_object, (sentence,))
                 self.neo.object_coordinates = (object.rect.x, object.rect.y)
                 self.neo.detected_objects.add(object)
                 self.bullet_list.remove(bullet)
