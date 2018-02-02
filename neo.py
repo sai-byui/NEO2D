@@ -63,9 +63,12 @@ class NEO(Agent):
         self.hands = Hands()
         self.legs = Legs()
         self.memory = Memory()
+        self.memory.create_object_memory()
         # self.mouth = Mouth()
         # self.ears = Ears()
         self.wernicke_area = Wernicke_Area()
+
+        self.current_object = None
 
         # these coordinates tell the agent how far away the object is
         self.object_coordinates = None
@@ -78,7 +81,8 @@ class NEO(Agent):
 
         # variables for A.I. behavior
         self.inspecting = False
-        self.detected_objects = pygame.sprite.Group()
+        self.detected_objects = []
+        self.uninspected_objects = []
 
         self.current_behavior = BEHAVIOR_STATE.SCANNING
         self.pathfinder = Pathfinder()
@@ -92,14 +96,15 @@ class NEO(Agent):
             abs(self.object_coordinates[0] - self.red_coordinate[0]) + abs(self.object_coordinates[1] - self.red_coordinate[1])
 
     def determine_behavior(self):
-        if not self.detected_objects:
-            self.current_behavior = BEHAVIOR_STATE.SCANNING
-        elif self.inspecting:
+        if self.inspecting:
             self.current_behavior = BEHAVIOR_STATE.INSPECTING
-        elif self.detected_objects and not self.path_found:
+        elif self.uninspected_objects and not self.path_found:
             self.current_behavior = BEHAVIOR_STATE.PATH_FINDING
+            self.current_object = self.uninspected_objects[0]
         elif self.path_found:
             self.current_behavior = BEHAVIOR_STATE.APPROACHING
+        else:
+            self.current_behavior = BEHAVIOR_STATE.SCANNING
 
 
     def determine_object_position(self):
@@ -119,6 +124,20 @@ class NEO(Agent):
             elif self.red_coordinate[0] < self.object_coordinates[0]:
                 self.current_position = PilotCurrentPosition.LEFT
 
+    def filter_detected_objects(self):
+        for object in self.detected_objects:
+            self.sql_statement = "SELECT * FROM objects WHERE object_x_pos = " + str(object.x) + \
+                " AND object_y_pos = " + str(object.y)
+            self.memory.recall_objects()
+            if self.ask("memory", "short_term_memory"):
+                self.detected_objects.remove(object)
+            else:
+                self.uninspected_objects += [object]
+                self.detected_objects.remove(object)
+
+
+
+
     def find_next_node(self):
         """finds the closest node in our path and removes nodes once they are reached"""
         if not (1 <= abs(self.rect.centerx - self.next_node_coordinates[0]) or 1 <= abs(
@@ -131,6 +150,7 @@ class NEO(Agent):
         return self.hit_points > 50
 
     def make_decision(self):
+        self.filter_detected_objects()
         self.determine_behavior()
         if self.current_behavior == BEHAVIOR_STATE.SCANNING:
             self.legs.rotate()
@@ -153,8 +173,12 @@ class NEO(Agent):
             #     self.mouth.stopSentence()
             #     _thread.start_new_thread(self.mouth.speak, ("Inspecting Object",))
             #     self.mouth.inspection_message_spoken = True
-            pass
-
+            self.eyes.look_at_object()
+            self.hands.pick_up_object()
+            self.memory.memorize()
+            self.inspecting = False
+            self.uninspected_objects.remove(self.current_object)
+            self.current_object = None
 
     def move_to_next_node(self):
         """tells the bot which direction to move to reach the next node in its path"""

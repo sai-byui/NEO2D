@@ -26,7 +26,9 @@ class Memory(Agent):
 
     def memorize(self):
         self.current_object_color = self.ask("eyes", "current_object_color")
-        self.current_object_name = self.ask("neo", "current_object_name")
+        self.current_object_name = self.ask("neo", "current_object").name
+        self.current_object_x_pos = self.ask("neo", "current_object").x
+        self.current_object_y_pos = self.ask("neo", "current_object").y
         self.current_object_weight = self.ask("hands", "current_object_weight")
         self.store_object_info()
 
@@ -37,9 +39,11 @@ class Memory(Agent):
         cursor = conn.cursor()
 
         # insert the object into the objects table along with its attributes
-        cursor.execute("INSERT INTO OBJECTS (object_name, object_color, object_weight) VALUES (:name, :color, :weight)",
+        cursor.execute("INSERT INTO OBJECTS (object_name, object_color, object_weight, object_x_pos, object_y_pos) "
+                       "VALUES (:name, :color, :weight, :x, :y)",
                        {'name': self.current_object_name, 'color': self.current_object_color,
-                        'weight': self.current_object_weight})
+                        'weight': self.current_object_weight, 'x': self.current_object_x_pos,
+                        'y': self.current_object_y_pos})
         # insert the color into the adjective table
         cursor.execute("INSERT OR IGNORE INTO ADJECTIVES (adjective_name, category) VALUES (:name, 'color')",
                        {'name': self.current_object_color})
@@ -79,7 +83,9 @@ class Memory(Agent):
                                object_id INTEGER PRIMARY KEY ,
                                OBJECT_NAME,
                                OBJECT_COLOR,
-                               OBJECT_WEIGHT
+                               OBJECT_WEIGHT,
+                               OBJECT_X_POS,
+                               OBJECT_Y_POS
                                )""")
 
             # create linking table between objects and adjectives

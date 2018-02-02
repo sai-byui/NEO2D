@@ -16,7 +16,7 @@ class Eyes(Agent):
         self.determine_color()
 
     def determine_color(self):
-        pass
+        self.current_object_color = self.ask("neo", "current_object").color
 
     def scan_room(self):
         if self.bot.reloaded():

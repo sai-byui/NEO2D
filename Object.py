@@ -15,11 +15,17 @@ class Object(pygame.sprite.Sprite):
     def __init__(self, name, color, weight, x, y, image):
         super(Object, self).__init__()
 
+        self.meta = Object_Meta(name, color, weight, x, y)
+        self.rect = pygame.Rect(x, y, 16, 16)
+        obj_image = pygame.image.load(image)
+        self.image = pygame.transform.scale(obj_image, (25, 25))
+
+class Object_Meta:
+    """Created because you cannot deepcopy (so you cannot 'ask') pygame.Surface objects"""
+
+    def __init__(self, name, color, weight, x, y):
         self.name = name
         self.color = color
         self.weight = weight
-        self.rect = pygame.Rect(x, y, 16, 16)
         self.x = x
         self.y = y
-        obj_image = pygame.image.load(image)
-        self.image = pygame.transform.scale(obj_image, (25, 25))
