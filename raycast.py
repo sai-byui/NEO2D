@@ -14,12 +14,8 @@ class RayCaster(pygame.sprite.Sprite):
         # Call the parent class (Sprite) constructor
         # the ray changes shape based on the angle it is traveling
         super(RayCaster, self).__init__()
-        if 1 <= divmod(angle, 45)[0] < 3 or 5 <= divmod(angle, 45)[0] < 7:
-            self.image = pygame.Surface([RAYCAST_LENGTH, RAYCAST_WIDTH], pygame.SRCALPHA, 32)
-            self.rect = pygame.Rect(0, 0, RAYCAST_LENGTH, RAYCAST_WIDTH)
-        else:
-            self.image = pygame.Surface([RAYCAST_WIDTH, RAYCAST_LENGTH], pygame.SRCALPHA, 32)
-            self.rect = pygame.Rect(0, 0, RAYCAST_WIDTH, RAYCAST_LENGTH)
+        self.image = pygame.Surface([RAYCAST_LENGTH, RAYCAST_WIDTH], pygame.SRCALPHA, 32)
+        self.rect = pygame.Rect(0, 0, RAYCAST_LENGTH, RAYCAST_WIDTH)
         # this line makes the raycast object visible
         self.image.fill(RED)
         # these specify what direction the ray cast is traveling
@@ -27,6 +23,7 @@ class RayCaster(pygame.sprite.Sprite):
         self.dy = dy
         self.rect.centerx = positionX + dx
         self.rect.centery = positionY + dy
+        self.image = pygame.transform.rotate(self.image, angle)
 
 
     def update_movement(self):
