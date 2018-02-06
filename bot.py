@@ -5,7 +5,7 @@ from raycast import RayCaster
 
 
 class Bot(pygame.sprite.Sprite):
-    """ the physical representation of NEO's body. Performs the physcial tasks such as walking and picking up objects"""
+    """ the physical representation of NEO's body. Performs the physical tasks such as walking and picking up objects"""
 
     def __init__(self):
         super(Bot, self).__init__()
@@ -27,11 +27,11 @@ class Bot(pygame.sprite.Sprite):
         self.last_shot_time = pygame.time.get_ticks()
 
     def reloaded(self):
+        """Checks if the gun (or raycaster) has reloaded."""
         if self.last_shot_time > pygame.time.get_ticks() - self.reload_time:
             return False
         else:
             return True
-
 
     def move(self, dx, dy):
         """takes movement parameters and applies the value to the x and y coordinates"""
@@ -63,22 +63,24 @@ class Bot(pygame.sprite.Sprite):
 
     def scan_ray_center(self):
         self.update_dx_dy()
-        raycast = RayCaster((self.rect.centerx + self.dx * 5), (self.rect.centery + self.dy * 5), self.dx, self.dy, self.angle_facing)
+        raycast = RayCaster((self.rect.centerx + self.dx * 5), (self.rect.centery + self.dy * 5), self.dx, self.dy,
+                            self.angle_facing)
         self.last_shot_time = pygame.time.get_ticks()
         return raycast
 
     def scan_ray_left(self):
         self.update_dx_dy_left()
-        raycast = RayCaster((self.rect.left + self.dx * 6), (self.rect.centery + self.dy * 6), self.dx, self.dy, self.angle_facing)
+        raycast = RayCaster((self.rect.left + self.dx * 6), (self.rect.centery + self.dy * 6), self.dx, self.dy,
+                            self.angle_facing)
         self.last_shot_time = pygame.time.get_ticks()
         return raycast
 
     def scan_ray_right(self):
         self.update_dx_dy_right()
-        raycast = RayCaster((self.rect.right + self.dx * 6), (self.rect.centery + self.dy * 6), self.dx, self.dy, self.angle_facing)
+        raycast = RayCaster((self.rect.right + self.dx * 6), (self.rect.centery + self.dy * 6), self.dx, self.dy,
+                            self.angle_facing)
         self.last_shot_time = pygame.time.get_ticks()
         return raycast
-
 
     def shoot_up(self):
             bullet = Bullet(1)

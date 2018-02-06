@@ -49,9 +49,6 @@ class BluePlayerPilot(Agent):
 
         self.bot.move(self.dx, self.dy)
 
-
-
-
     def shoot(self):
         """adds bullets to the game"""
         # first determine if we can shoot

@@ -22,7 +22,6 @@ class Wernicke_Area(Agent):
         self.correct_syntax = True
         self.answer_unknown = False
 
-
     def analyze_query(self):
         self.reset_variables()
         self.original_sentence = self.ask("neo", "sentence")
@@ -41,7 +40,7 @@ class Wernicke_Area(Agent):
     def create_where_statement(self):
         """filters which objects are selected by using the set of qualifying attributes("red", "heavy", etc.) """
         self.where_statement = "WHERE "
-        self.where_statement += "od.adjective_id IN ({0});".format(", ".join( repr(e) for e in self.qualifier_list))
+        self.where_statement += "od.adjective_id IN ({0});".format(", ".join(repr(e) for e in self.qualifier_list))
 
     def determine_inter(self):
         """finds which question word is being used, more words will be added in future versions"""
@@ -69,7 +68,7 @@ class Wernicke_Area(Agent):
                 self.answer_unknown = True
 
     def form_sql_statement(self):
-        self.sql_statement = self.select_statement + self.from_statement +self.where_statement
+        self.sql_statement = self.select_statement + self.from_statement + self.where_statement
 
     def reset_qualifiers(self):
         self.qualifier_list.clear()

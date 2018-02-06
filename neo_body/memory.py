@@ -19,12 +19,15 @@ class Memory(Agent):
         self.current_object_name = None
         self.short_term_memory = None
         self.current_object_weight = None
+        self.current_object_x_pos = None
+        self.current_object_y_pos = None
         self.current_row_index = 1
         self.colors = {}
         self.weights = {}
         self.create_object_memory()
 
     def memorize(self):
+        """Writes the attributes of the current object to the database"""
         self.current_object_color = self.ask("eyes", "current_object_color")
         self.current_object_name = self.ask("neo", "current_object").name
         self.current_object_x_pos = self.ask("neo", "current_object").x
@@ -67,7 +70,6 @@ class Memory(Agent):
 
         conn.commit()
         conn.close()
-
 
     def create_object_memory(self):
         """creates neo's DB tables the first time neo is initialized or in the event that the DB file is not found"""

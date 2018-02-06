@@ -54,7 +54,6 @@ class GameManager(Agent):
         self.wall_list = self.house.get_object("wall_list")
         self.object_list = self.house.get_object("object_list")
 
-
     def check_bullet_collisions(self):
         """checks if any bullets have collided with objects and need to be removed"""
         for bullet in self.bullet_list:
@@ -77,22 +76,20 @@ class GameManager(Agent):
         #         self.bullet_list.remove(bullet)
         pass
 
-
     def check_object_ray_collision(self, bullet):
-        for object in self.object_list:
-            if bullet.rect.colliderect(object):
+        for obj in self.object_list:
+            if bullet.rect.colliderect(obj):
                 # self.neo.mouth.stopSentence()
-                sentence = object.meta.name + " detected"
+                sentence = obj.meta.name + " detected"
                 # _thread.start_new_thread(self.neo.mouth.identify_detected_object, (sentence,))
-                self.neo.object_coordinates = (object.rect.x, object.rect.y)
-                self.neo.detected_objects += [object.meta]
+                self.neo.object_coordinates = (obj.rect.x, obj.rect.y)
+                self.neo.detected_objects += [obj.meta]
                 self.bullet_list.remove(bullet)
 
     def check_wall_bullet_collision(self, bullet):
         for wall_block in self.wall_list:
             if bullet.rect.colliderect(wall_block):
                 self.bullet_list.remove(bullet)
-
 
     def check_pygame_events(self):
         """checks any for events such as keys pressed or A.I. actions that change the state of the game"""

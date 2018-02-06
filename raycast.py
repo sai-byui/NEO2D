@@ -10,7 +10,7 @@ RAYCAST_SPEED = 5
 class RayCaster(pygame.sprite.Sprite):
     """sensors that neo uses to scan objects in its area. It performs similar to the bullet class
         if the ray caster collides with an object neo is notified"""
-    def __init__(self, positionX, positionY, dx, dy, angle):
+    def __init__(self, position_x, position_y, dx, dy, angle):
         # Call the parent class (Sprite) constructor
         # the ray changes shape based on the angle it is traveling
         super(RayCaster, self).__init__()
@@ -21,10 +21,9 @@ class RayCaster(pygame.sprite.Sprite):
         # these specify what direction the ray cast is traveling
         self.dx = dx
         self.dy = dy
-        self.rect.centerx = positionX + dx
-        self.rect.centery = positionY + dy
+        self.rect.centerx = position_x + dx
+        self.rect.centery = position_y + dy
         self.image = pygame.transform.rotate(self.image, angle)
-
 
     def update_movement(self):
         self.rect.x += self.dx * RAYCAST_SPEED

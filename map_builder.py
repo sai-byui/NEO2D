@@ -160,7 +160,7 @@ class MapBuilder(Agent):
         test_object3 = Object('apple', 'red', 1, 400, 200, 'apple.png')
         self.object_list.add(test_object3)  # insert test object into environment
 
-        #There's a problem where NEO does not check behind objects - i.e., the 3 above
+        # There's a problem where NEO does not check behind objects - i.e., the 3 above
 
 
 level_map = []

@@ -87,13 +87,16 @@ class NEO(Agent):
         self.current_behavior = BEHAVIOR_STATE.SCANNING
         self.pathfinder = Pathfinder()
 
+        self.sql_statement = None
+
     def act_out_decision(self):
         pass
 
     def check_distance_from_object(self):
         self.update_coordinates()
         self.distance_from_object = \
-            abs(self.object_coordinates[0] - self.red_coordinate[0]) + abs(self.object_coordinates[1] - self.red_coordinate[1])
+            abs(self.object_coordinates[0] - self.red_coordinate[0]) + \
+            abs(self.object_coordinates[1] - self.red_coordinate[1])
 
     def determine_behavior(self):
         if self.inspecting:
@@ -105,7 +108,6 @@ class NEO(Agent):
             self.current_behavior = BEHAVIOR_STATE.APPROACHING
         else:
             self.current_behavior = BEHAVIOR_STATE.SCANNING
-
 
     def determine_object_position(self):
         """"used to determine which direction the red player should turn to face object"""
@@ -125,18 +127,16 @@ class NEO(Agent):
                 self.current_position = PilotCurrentPosition.LEFT
 
     def filter_detected_objects(self):
-        for object in self.detected_objects:
-            self.sql_statement = "SELECT * FROM objects WHERE object_x_pos = " + str(object.x) + \
-                " AND object_y_pos = " + str(object.y)
+        """Decides whether detected objects(currently just 1 at a time) have been inspected before"""
+        for obj in self.detected_objects:
+            self.sql_statement = "SELECT * FROM objects WHERE object_x_pos = " + str(obj.x) + \
+                " AND object_y_pos = " + str(obj.y)
             self.memory.recall_objects()
             if self.ask("memory", "short_term_memory"):
-                self.detected_objects.remove(object)
+                self.detected_objects.remove(obj)
             else:
-                self.uninspected_objects += [object]
-                self.detected_objects.remove(object)
-
-
-
+                self.uninspected_objects += [obj]
+                self.detected_objects.remove(obj)
 
     def find_next_node(self):
         """finds the closest node in our path and removes nodes once they are reached"""
@@ -150,6 +150,7 @@ class NEO(Agent):
         return self.hit_points > 50
 
     def make_decision(self):
+        """Acts out decisions based on the current behavior state"""
         self.filter_detected_objects()
         self.determine_behavior()
         if self.current_behavior == BEHAVIOR_STATE.SCANNING:
@@ -193,26 +194,23 @@ class NEO(Agent):
         elif self.next_node_coordinates[1] > self.rect.centery:
             self.bot.move(0, 2)
 
-    def rotate(self):
-        self.angle += .5
-        key = pygame.key.get_pressed()
-        if key[pygame.K_LEFT]:
-            self.angle += 4
-        if key[pygame.K_RIGHT]:
-            self.angle -= 4
-        # self.angle += 2
-        self.angle %= 360
-        self.bot.angle_facing = self.angle
-        self.bot.update_dx_dy()
-
-        rect_center = self.bot.image.get_rect()
-        self.bot.image = pygame.transform.rotozoom(self.original_image, self.angle, 1)
-        rot_rect = rect_center.copy()
-        rot_rect.center = self.bot.image.get_rect().center
-        self.bot.image = self.bot.image.subsurface(rot_rect).copy()
-
-
-
+    # def rotate(self): Use the one in legs.py instead
+    #     self.angle += .5
+    #     key = pygame.key.get_pressed()
+    #     if key[pygame.K_LEFT]:
+    #         self.angle += 4
+    #     if key[pygame.K_RIGHT]:
+    #         self.angle -= 4
+    #     # self.angle += 2
+    #     self.angle %= 360
+    #     self.bot.angle_facing = self.angle
+    #     self.bot.update_dx_dy()
+    #
+    #     rect_center = self.bot.image.get_rect()
+    #     self.bot.image = pygame.transform.rotozoom(self.original_image, self.angle, 1)
+    #     rot_rect = rect_center.copy()
+    #     rot_rect.center = self.bot.image.get_rect().center
+    #     self.bot.image = self.bot.image.subsurface(rot_rect).copy()
 
     def setup_bot_map(self):
         self.bot.wall_list = self.environment.get_object("wall_list")
@@ -247,6 +245,7 @@ class PilotCurrentPosition(Enum):
     BELOW = 2
     LEFT = 3
     RIGHT = 4
+
 
 class BEHAVIOR_STATE(Enum):
     SCANNING = 1

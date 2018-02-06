@@ -2,7 +2,6 @@ from agent import Agent
 # import pyttsx3
 
 
-
 class Mouth(Agent):
     """The speaking agent of the program"""
 
@@ -21,8 +20,8 @@ class Mouth(Agent):
     def list_similar_objects(self):
         if self.ask("wernicke_area", "correct_syntax") and not self.ask("wernicke_area", "answer_unknown"):
             object_list = self.ask("brain", "list_of_objects")
-            for object in object_list:
-                print(object[0])
+            for obj in object_list:
+                print(obj[0])
         else:
             print("I don't know")
 

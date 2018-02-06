@@ -1,7 +1,7 @@
 import speech_recognition
 from agent import Agent
 
-PHRASE_TIME_LIMIT = 4.0 # each phrase will run 4 seconds before the microphone stops processing audio
+PHRASE_TIME_LIMIT = 4.0  # each phrase will run 4 seconds before the microphone stops processing audio
 
 # This is where we can put our verbal keywords commands
 # all words must be lower case to be recognized
@@ -27,6 +27,7 @@ grammar: Union[str, None] = None, show_all: bool = False
 Link to SpeechRecognition reference library:
 https://github.com/Uberi/speech_recognition/blob/master/reference/library-reference.rst
 """
+
 
 class Ears(Agent):
     """The listening agent of the program. The ears take in audio input and recognize speech commands
@@ -55,9 +56,8 @@ class Ears(Agent):
         except speech_recognition.RequestError as e:
             print("Sphinx error; {0}".format(e))
 
-
     def listen(self):
-        while(True):
+        while True:
             with self.microphone as source:
                 audio = self.recognizer.listen(self.microphone)
                 try:

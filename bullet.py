@@ -13,7 +13,7 @@ class Bullet(pygame.sprite.Sprite):
         if self.direction == 1 or self.direction == 2:
             self.image = pygame.Surface([2, 6])
             self.rect = pygame.Rect(0, 0, 2, 6)
-        else :
+        else:
             self.image = pygame.Surface([6, 2])
             self.rect = pygame.Rect(0, 0, 6, 2)
 

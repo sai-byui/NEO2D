@@ -57,7 +57,7 @@ class Pathfinder(Agent):
         The find_path method works in the following steps:
             1. the first node in your open_list becomes your current node whose connections you are searching
             2. remove the current node from the open_list and place it into the closed_list
-            3. for each connection to the current node, find the connected node in our unvisited list and determine it's F cost
+            3. for each connection to the current node, find the connected node in our unvisited list and determine its F cost
             4. once a node's F cost is determined, sort it into the open_list from lowest F cost to Highest
             5. when all the current node's connections have been checked, repeat steps 1 - 4 until your end goal is reached
             """
@@ -185,7 +185,8 @@ def determine_cost(current_node, unvisited_node, end_node):
         """
     # determine the distance based on the difference in our x and y coordinates,
     # then add on the distance we already are from the start node
-    unvisited_node.g = (((current_node.x - unvisited_node.x) ** 2 + (current_node.y - unvisited_node.y) ** 2) ** .5) + current_node.g
+    unvisited_node.g = (((current_node.x - unvisited_node.x) ** 2 +
+                         (current_node.y - unvisited_node.y) ** 2) ** .5) + current_node.g
 
     h = ((end_node.x - unvisited_node.x) ** 2 + (end_node.y - unvisited_node.y) ** 2) ** .5
 

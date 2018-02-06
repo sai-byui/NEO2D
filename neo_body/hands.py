@@ -12,6 +12,7 @@ class Hands(Agent):
         self.current_object_temperature = None
 
     def pick_up_object(self):
+        """For now, only gets weight. Later, may determine softness, wetness, etc."""
         self.current_object_weight = self.ask("neo", "current_object").weight
 
 
