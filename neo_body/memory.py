@@ -83,12 +83,23 @@ class Memory(Agent):
             cursor.execute("""CREATE TABLE IF NOT EXISTS OBJECTS
                               (
                                object_id INTEGER PRIMARY KEY ,
-                               OBJECT_NAME,
-                               OBJECT_COLOR,
-                               OBJECT_WEIGHT,
-                               OBJECT_X_POS,
-                               OBJECT_Y_POS
+                               OBJECT_NAME TEXT,
+                               OBJECT_COLOR TEXT,
+                               OBJECT_WEIGHT NUMERIC,
+                               OBJECT_X_POS INTEGER,
+                               OBJECT_Y_POS INTEGER
                                )""")
+
+            # creating adjective table
+            cursor.execute("""DROP TABLE IF EXISTS ADJECTIVES""")
+            cursor.execute("""CREATE TABLE IF NOT EXISTS ADJECTIVES
+                                  (
+                                   adjective_id INTEGER PRIMARY KEY ,
+                                   adjective_name UNIQUE,
+                                   category TEXT,
+                                   less_than,
+                                   greater_than
+                                  )""")
 
             # create linking table between objects and adjectives
             cursor.execute("""DROP TABLE IF EXISTS OBJECT_DESCRIPTION""")
@@ -98,16 +109,7 @@ class Memory(Agent):
                                adjective_id INTEGER REFERENCES ADJECTIVES (adjective_id) ON DELETE CASCADE
                               )""")
 
-            # creating adjective table
-            cursor.execute("""DROP TABLE IF EXISTS ADJECTIVES""")
-            cursor.execute("""CREATE TABLE IF NOT EXISTS ADJECTIVES
-                              (
-                               adjective_id INTEGER PRIMARY KEY ,
-                               adjective_name UNIQUE,
-                               category,
-                               less_than,
-                               greater_than
-                              )""")
+
 
             conn.commit()
             conn.close()

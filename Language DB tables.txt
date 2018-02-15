@@ -69,3 +69,11 @@ cursor.execute("""CREATE TABLE IF NOT EXISTS
    object_id INTEGER REFERENCES OBJECTS (object_id),
    adjective_id INTEGER REFERENCES ADJECTIVES (adjective_id)
   )""")
+  
+  cursor.execute("""CREATE TABLE IF NOT EXISTS LOCATIONS
+  (
+   LOCATION_ID INTEGER PRIMARY KEY ,
+   LOCATION_NAME UNIQUE,
+   LOCATION_X INTEGER,
+   LOCATION_Y INTEGER
+   )""")
