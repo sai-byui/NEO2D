@@ -31,5 +31,5 @@ class Legs(Agent):
         rot_rect.center = self.bot.image.get_rect().center
         self.bot.image = self.bot.image.subsurface(rot_rect).copy()
 
-    def walk(self):
-        pass
+    def walk(self, dx, dy):
+        self.bot.move(dx, dy)

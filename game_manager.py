@@ -26,6 +26,7 @@ class GameManager(Agent):
         self.screen_width = 1116
         self.running_game = True
 
+
         # player list
         self.player_list = pygame.sprite.Group()
         self.house.add_object("player_list", self.player_list)
@@ -98,6 +99,8 @@ class GameManager(Agent):
                 self.running_game = False
             if e.type == pygame.KEYDOWN and e.key == pygame.K_ESCAPE:
                 self.running_game = False
+            if e.type == pygame.KEYDOWN and e.key == pygame.K_t:
+                self.neo.running_training = True
 
     def draw(self):
         """displays the game images on the screen"""

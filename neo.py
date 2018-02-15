@@ -86,6 +86,7 @@ class NEO(Agent):
 
         self.current_behavior = BEHAVIOR_STATE.SCANNING
         self.pathfinder = Pathfinder()
+        self.running_training = False
 
         self.sql_statement = None
 
@@ -151,35 +152,38 @@ class NEO(Agent):
 
     def make_decision(self):
         """Acts out decisions based on the current behavior state"""
-        self.filter_detected_objects()
-        self.determine_behavior()
-        if self.current_behavior == BEHAVIOR_STATE.SCANNING:
-            self.legs.rotate()
-            self.angle = self.ask("legs", "angle")
-            self.eyes.scan_room()
-            # _thread.start_new_thread(self.mouth.speak, ("Scanning Room",))
-        elif self.current_behavior == BEHAVIOR_STATE.PATH_FINDING:
-            self.path_course = self.pathfinder.find_path(self.object_coordinates)
-            self.path_found = True
-            self.next_node_coordinates = (self.path_course[0].x, self.path_course[0].y)
-        elif self.current_behavior == BEHAVIOR_STATE.APPROACHING:
-            if not self.path_course:
-                self.path_found = False
-                self.inspecting = True
-                return
-            self.find_next_node()
-            self.move_to_next_node()
-        elif self.current_behavior == BEHAVIOR_STATE.INSPECTING:
-            # if not self.mouth.inspection_message_spoken:
-            #     self.mouth.stopSentence()
-            #     _thread.start_new_thread(self.mouth.speak, ("Inspecting Object",))
-            #     self.mouth.inspection_message_spoken = True
-            self.eyes.look_at_object()
-            self.hands.pick_up_object()
-            self.memory.memorize()
-            self.inspecting = False
-            self.uninspected_objects.remove(self.current_object)
-            self.current_object = None
+        if not self.running_training:
+            self.filter_detected_objects()
+            self.determine_behavior()
+            if self.current_behavior == BEHAVIOR_STATE.SCANNING:
+                self.legs.rotate()
+                self.angle = self.ask("legs", "angle")
+                self.eyes.scan_room()
+                # _thread.start_new_thread(self.mouth.speak, ("Scanning Room",))
+            elif self.current_behavior == BEHAVIOR_STATE.PATH_FINDING:
+                self.path_course = self.pathfinder.find_path(self.object_coordinates)
+                self.path_found = True
+                self.next_node_coordinates = (self.path_course[0].x, self.path_course[0].y)
+            elif self.current_behavior == BEHAVIOR_STATE.APPROACHING:
+                if not self.path_course:
+                    self.path_found = False
+                    self.inspecting = True
+                    return
+                self.find_next_node()
+                self.move_to_next_node()
+            elif self.current_behavior == BEHAVIOR_STATE.INSPECTING:
+                # if not self.mouth.inspection_message_spoken:
+                #     self.mouth.stopSentence()
+                #     _thread.start_new_thread(self.mouth.speak, ("Inspecting Object",))
+                #     self.mouth.inspection_message_spoken = True
+                self.eyes.look_at_object()
+                self.hands.pick_up_object()
+                self.memory.memorize()
+                self.inspecting = False
+                self.uninspected_objects.remove(self.current_object)
+                self.current_object = None
+        else:
+            self.run_training()
 
     def move_to_next_node(self):
         """tells the bot which direction to move to reach the next node in its path"""
@@ -211,6 +215,17 @@ class NEO(Agent):
     #     rot_rect = rect_center.copy()
     #     rot_rect.center = self.bot.image.get_rect().center
     #     self.bot.image = self.bot.image.subsurface(rot_rect).copy()
+
+    def run_training(self):
+        key = pygame.key.get_pressed()
+        if key[pygame.K_LEFT]:
+            self.legs.walk(-2, 0)
+        if key[pygame.K_RIGHT]:
+            self.legs.walk(2, 0)
+        if key[pygame.K_UP]:
+            self.legs.walk(0, -2)
+        if key[pygame.K_DOWN]:
+            self.legs.walk(0, 2)
 
     def setup_bot_map(self):
         self.bot.wall_list = self.environment.get_object("wall_list")
