@@ -15,12 +15,14 @@ class Wernicke_Area(Agent):
         self.query = None
         self.word_array = []
         self.qualifier_list = []
+        self.location_list = []
         self.select_statement = None
         self.from_statement = None
         self.where_statement = None
         self.sql_statement = None
         self.correct_syntax = True
         self.answer_unknown = False
+        self.location_coordinates = None
 
     def analyze_query(self):
         self.reset_variables()
@@ -84,4 +86,24 @@ class Wernicke_Area(Agent):
         self.correct_syntax = True
         self.answer_unknown = False
 
+    def parse_command(self, command):
+        self.location_list.clear()
+        conn = sqlite3.connect('neo_test.db')
+        cursor = conn.cursor()
+        word_array = command.split()
+        for word in word_array:
+            cursor.execute("SELECT location_id FROM LOCATIONS WHERE location_name LIKE ?", (word.lower() + '%',))
+            result = cursor.fetchone()
+            if result:
+                self.location_list.append(result[0])
+                print(self.location_list[0])
+
+        self.determine_location(cursor)
+        conn.close()
+
+    def determine_location(self, cursor):
+        cursor.execute("""SELECT LOCATION_X, LOCATION_Y FROM LOCATIONS WHERE LOCATION_ID = ?""", (self.location_list[0],))
+        result = cursor.fetchone()
+        self.location_coordinates = result
+        print(result)
 

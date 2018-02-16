@@ -217,15 +217,39 @@ class NEO(Agent):
     #     self.bot.image = self.bot.image.subsurface(rot_rect).copy()
 
     def run_training(self):
-        key = pygame.key.get_pressed()
-        if key[pygame.K_LEFT]:
-            self.legs.walk(-2, 0)
-        if key[pygame.K_RIGHT]:
-            self.legs.walk(2, 0)
-        if key[pygame.K_UP]:
-            self.legs.walk(0, -2)
-        if key[pygame.K_DOWN]:
-            self.legs.walk(0, 2)
+        if self.current_behavior != BEHAVIOR_STATE.PATH_FINDING:
+            key = pygame.key.get_pressed()
+            if key[pygame.K_LEFT]:
+                self.legs.walk(-2, 0)
+            if key[pygame.K_RIGHT]:
+                self.legs.walk(2, 0)
+            if key[pygame.K_UP]:
+                self.legs.walk(0, -2)
+            if key[pygame.K_DOWN]:
+                self.legs.walk(0, 2)
+
+            if key[pygame.K_SPACE]:
+                location_name = input("Enter a name for this location:")
+                self.memory.save_location(location_name)
+            if key[pygame.K_c]:
+                command = input("Enter a command to run")
+                self.wernicke_area.parse_command(command)
+                location_coordinates = self.ask("wernicke_area", "location_coordinates")
+                self.update_coordinates()
+                self.path_course = self.pathfinder.find_path(location_coordinates)
+                self.current_behavior = BEHAVIOR_STATE.PATH_FINDING
+                # print(self.path_course)
+        elif self.current_behavior == BEHAVIOR_STATE.PATH_FINDING:
+            if not self.path_course:
+                self.path_found = False
+                self.current_behavior = BEHAVIOR_STATE.TRAINING
+                return
+            else:
+                self.next_node_coordinates = (self.path_course[0].x, self.path_course[0].y)
+                self.find_next_node()
+                self.move_to_next_node()
+
+
 
     def setup_bot_map(self):
         self.bot.wall_list = self.environment.get_object("wall_list")
@@ -244,7 +268,6 @@ class NEO(Agent):
 
     def update_coordinates(self):
         self.red_coordinate = (self.rect.x, self.rect.y)
-        self.object_coordinates = self.ask("blue_player_pilot", "blue_coordinate")
 
 
 class PilotAgentBehavior(Enum):
@@ -268,3 +291,4 @@ class BEHAVIOR_STATE(Enum):
     INSPECTING = 3
     FINISHED = 4
     PATH_FINDING = 5
+    TRAINING = 6

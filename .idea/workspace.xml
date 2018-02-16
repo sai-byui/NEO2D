@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5e0127a-ef1a-40ef-8454-ff2433977d29" name="Default" comment="" />
+    <list default="true" id="b5e0127a-ef1a-40ef-8454-ff2433977d29" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/NEO2D.iml" afterPath="$PROJECT_DIR$/.idea/NEO2D.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/map_builder.py" afterPath="$PROJECT_DIR$/map_builder.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neo.py" afterPath="$PROJECT_DIR$/neo.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neo_body/legs.py" afterPath="$PROJECT_DIR$/neo_body/legs.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neo_body/memory.py" afterPath="$PROJECT_DIR$/neo_body/memory.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neo_body/wernicke_area.py" afterPath="$PROJECT_DIR$/neo_body/wernicke_area.py" />
+    </list>
+    <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -9,14 +19,24 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/NEO2D$main_manager.coverage" NAME="main_manager Coverage Results" MODIFIED="1518750647871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="NEO2D" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="legs.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neo_body/legs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="21" column="12" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+            <state relative-caret-position="265">
+              <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -27,8 +47,8 @@
       <file leaf-file-name="pathfinder.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pathfinder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="59" column="118" lean-forward="true" selection-start-line="59" selection-start-column="118" selection-end-line="59" selection-end-column="118" />
+            <state relative-caret-position="118">
+              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -37,8 +57,8 @@
       <file leaf-file-name="ears.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neo_body/ears.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="43" column="12" lean-forward="false" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
+            <state relative-caret-position="-24">
+              <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -49,18 +69,36 @@
       <file leaf-file-name="memory.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neo_body/memory.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="8" column="105" lean-forward="false" selection-start-line="8" selection-start-column="105" selection-end-line="8" selection-end-column="105" />
-              <folding />
+            <state relative-caret-position="311">
+              <caret line="156" column="20" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+                <marker date="1518745890807" expanded="true" signature="1918:2074" placeholder="INSERT INTO OBJECTS... " />
+                <marker date="1518745890807" expanded="true" signature="2398:2481" placeholder="INSERT OR IG... ADJECTIVES" />
+                <marker date="1518745890807" expanded="true" signature="2659:2719" placeholder="SELECT adjec... ADJECTIVES" />
+                <marker date="1518745890807" expanded="true" signature="2908:2959" placeholder="SELECT objec... OBJECTS" />
+                <marker date="1518745890807" expanded="true" signature="3142:3291" placeholder="INSERT INTO OBJECT_DESCRIPTION... " />
+                <marker date="1518745890807" expanded="true" signature="3447:3494" placeholder="SELECT * FRO... OBJECTS" />
+                <marker date="1518745890807" expanded="true" signature="3933:3961" placeholder="DROP TABLE I... " />
+                <marker date="1518745890807" expanded="true" signature="3996:4416" placeholder="CREATE TABLE... OBJECTS" />
+                <marker date="1518745890807" expanded="true" signature="4491:4522" placeholder="DROP TABLE I... " />
+                <marker date="1518745890807" expanded="true" signature="4557:4938" placeholder="CREATE TABLE... ADJECTIVES" />
+                <marker date="1518745890807" expanded="true" signature="5040:5079" placeholder="DROP TABLE I... " />
+                <marker date="1518745890807" expanded="true" signature="5114:5430" placeholder="CREATE TABLE... OBJECT_DESCRIPTION" />
+                <marker date="1518745890807" expanded="true" signature="5466:5817" placeholder="CREATE TABLE... LOCATIONS" />
+                <marker date="1518745890807" expanded="true" signature="6658:6719" placeholder="INSERT INTO OBJECTS... " />
+                <marker date="1518745890807" expanded="true" signature="6658:6754" placeholder="INSERT INTO OBJECTS... " />
+                <marker date="1518745890807" expanded="true" signature="6857:6880" placeholder="SELECT * FRO... LOCATIONS" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mouth.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/neo_body/mouth.py">
+      <file leaf-file-name="house1.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/house1.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="20" column="21" lean-forward="false" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -69,55 +107,60 @@
       <file leaf-file-name="neo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="209" column="44" lean-forward="false" selection-start-line="209" selection-start-column="44" selection-end-line="209" selection-end-column="44" />
+            <state relative-caret-position="340">
+              <caret line="235" column="0" selection-start-line="235" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
+                <marker date="1518749699559" expanded="true" signature="5125:5224" placeholder="SELECT * FRO... objects" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Language DB tables.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Language DB tables.txt">
+      <file leaf-file-name="map_builder.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/map_builder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+            <state relative-caret-position="204">
+              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="raycast.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/raycast.py">
+      <file leaf-file-name="wernicke_area.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/neo_body/wernicke_area.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+            <state relative-caret-position="183">
+              <caret line="89" column="34" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#0#23#0" expanded="true" />
+                <marker date="1518750196093" expanded="true" signature="2343:2403" placeholder="SELECT adjec... ADJECTIVES" />
+                <marker date="1518750196093" expanded="true" signature="3477:3537" placeholder="SELECT adjec... ADJECTIVES" />
+                <marker date="1518750196093" expanded="true" signature="3854:3898" placeholder="SELECT LOCAT... LOCATIONS" />
+                <marker date="1518750196093" expanded="true" signature="3854:3920" placeholder="SELECT LOCAT... LOCATIONS" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bot.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="79" column="8" lean-forward="false" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1337">
+              <caret line="82" column="8" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="game_manager.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game_manager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="46" lean-forward="false" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
-              <folding />
+            <state relative-caret-position="118">
+              <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -141,27 +184,43 @@
         <option value="$PROJECT_DIR$/blue_player_pilot.py" />
         <option value="$PROJECT_DIR$/bullet.py" />
         <option value="$PROJECT_DIR$/environment.py" />
-        <option value="$PROJECT_DIR$/neo_body/legs.py" />
-        <option value="$PROJECT_DIR$/map_builder.py" />
-        <option value="$PROJECT_DIR$/neo_body/memory.py" />
-        <option value="$PROJECT_DIR$/neo_body/wernicke_area.py" />
         <option value="$PROJECT_DIR$/Object.py" />
         <option value="$PROJECT_DIR$/raycast.py" />
         <option value="$PROJECT_DIR$/neo_body/ears.py" />
-        <option value="$PROJECT_DIR$/game_manager.py" />
         <option value="$PROJECT_DIR$/neo_body/mouth.py" />
+        <option value="$PROJECT_DIR$/pathfinder.py" />
         <option value="$PROJECT_DIR$/bot.py" />
         <option value="$PROJECT_DIR$/Language DB tables.txt" />
+        <option value="$PROJECT_DIR$/game_manager.py" />
+        <option value="$PROJECT_DIR$/neo_body/memory.py" />
         <option value="$PROJECT_DIR$/neo.py" />
-        <option value="$PROJECT_DIR$/pathfinder.py" />
+        <option value="$PROJECT_DIR$/neo_body/wernicke_area.py" />
+        <option value="$PROJECT_DIR$/neo_body/legs.py" />
+        <option value="$PROJECT_DIR$/map_builder.py" />
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1098" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -182,6 +241,12 @@
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NEO2D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="NEO2D" />
@@ -213,6 +278,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -239,10 +305,61 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="NEO2D" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main_manager.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="NEO2D" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="NEO2D" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="NEO2D" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
       <method />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -257,10 +374,10 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="NEO2D" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="Tox" factoryName="Tox">
@@ -272,7 +389,44 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <module name="NEO2D" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="NEO2D" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -285,6 +439,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="NEO2D" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
@@ -292,6 +447,28 @@
       <option name="TEST_TYPE" value="TEST_SCRIPT" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="NEO2D" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -304,9 +481,42 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="NEO2D" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;.&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="NEO2D" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
     <list size="1">
@@ -321,6 +531,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="b5e0127a-ef1a-40ef-8454-ff2433977d29" name="Default" comment="" />
@@ -329,63 +542,115 @@
       <option name="presentableId" value="Default" />
       <updated>1517599094542</updated>
     </task>
+    <task id="LOCAL-00001" summary="added locations DB table">
+      <created>1518722662713</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1518722662713</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added training mode to teach neo about locations">
+      <created>1518724182065</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1518724182065</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24450952" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39937106" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added locations DB table" />
+    <MESSAGE value="added training mode to teach neo about locations" />
+    <option name="LAST_COMMIT_MESSAGE" value="added training mode to teach neo about locations" />
+  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/neo.py</url>
+          <line>234</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="8" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/neo_body/hands.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
-          <caret line="14" column="82" lean-forward="false" selection-start-line="14" selection-start-column="82" selection-end-line="14" selection-end-column="82" />
-          <folding />
+          <caret line="14" column="82" selection-start-line="14" selection-start-column="82" selection-end-line="14" selection-end-column="82" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/neo_body/eyes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
-          <caret line="23" column="81" lean-forward="false" selection-start-line="23" selection-start-column="81" selection-end-line="23" selection-end-column="81" />
-          <folding />
+          <caret line="23" column="81" selection-start-line="23" selection-start-column="81" selection-end-line="23" selection-end-column="81" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/neo_body/memory.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
-          <caret line="27" column="70" lean-forward="false" selection-start-line="27" selection-start-column="70" selection-end-line="27" selection-end-column="70" />
+          <caret line="27" column="70" selection-start-line="27" selection-start-column="70" selection-end-line="27" selection-end-column="70" />
           <folding>
-            <element signature="e#0#21#0" expanded="false" />
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1518745890807" expanded="true" signature="1918:2074" placeholder="INSERT INTO OBJECTS... " />
+            <marker date="1518745890807" expanded="true" signature="2398:2481" placeholder="INSERT OR IG... ADJECTIVES" />
+            <marker date="1518745890807" expanded="true" signature="2659:2719" placeholder="SELECT adjec... ADJECTIVES" />
+            <marker date="1518745890807" expanded="true" signature="2908:2959" placeholder="SELECT objec... OBJECTS" />
+            <marker date="1518745890807" expanded="true" signature="3142:3291" placeholder="INSERT INTO OBJECT_DESCRIPTION... " />
+            <marker date="1518745890807" expanded="true" signature="3447:3494" placeholder="SELECT * FRO... OBJECTS" />
+            <marker date="1518745890807" expanded="true" signature="3933:3961" placeholder="DROP TABLE I... " />
+            <marker date="1518745890807" expanded="true" signature="3996:4416" placeholder="CREATE TABLE... OBJECTS" />
+            <marker date="1518745890807" expanded="true" signature="4491:4522" placeholder="DROP TABLE I... " />
+            <marker date="1518745890807" expanded="true" signature="4557:4938" placeholder="CREATE TABLE... ADJECTIVES" />
+            <marker date="1518745890807" expanded="true" signature="5040:5079" placeholder="DROP TABLE I... " />
+            <marker date="1518745890807" expanded="true" signature="5114:5430" placeholder="CREATE TABLE... OBJECT_DESCRIPTION" />
+            <marker date="1518745890807" expanded="true" signature="5466:5817" placeholder="CREATE TABLE... LOCATIONS" />
+            <marker date="1518745890807" expanded="true" signature="6658:6719" placeholder="INSERT INTO OBJECTS... " />
+            <marker date="1518745890807" expanded="true" signature="6658:6754" placeholder="INSERT INTO OBJECTS... " />
+            <marker date="1518745890807" expanded="true" signature="6857:6880" placeholder="SELECT * FRO... LOCATIONS" />
           </folding>
         </state>
       </provider>
@@ -393,17 +658,20 @@
     <entry file="file://$PROJECT_DIR$/neo_body/mouth.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/neo_body/wernicke_area.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
+            <marker date="1518750196093" expanded="true" signature="2343:2403" placeholder="SELECT adjec... ADJECTIVES" />
+            <marker date="1518750196093" expanded="true" signature="3477:3537" placeholder="SELECT adjec... ADJECTIVES" />
+            <marker date="1518750196093" expanded="true" signature="3854:3898" placeholder="SELECT LOCAT... LOCATIONS" />
+            <marker date="1518750196093" expanded="true" signature="3854:3920" placeholder="SELECT LOCAT... LOCATIONS" />
           </folding>
         </state>
       </provider>
@@ -411,7 +679,7 @@
     <entry file="file://$PROJECT_DIR$/agent.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -424,19 +692,16 @@
     <entry file="file://$PROJECT_DIR$/blue_player_pilot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -444,7 +709,7 @@
     <entry file="file://$PROJECT_DIR$/game_manager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1680">
-          <caret line="88" column="47" lean-forward="false" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
+          <caret line="88" column="47" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -454,9 +719,10 @@
     <entry file="file://$PROJECT_DIR$/neo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3108">
-          <caret line="165" column="39" lean-forward="true" selection-start-line="165" selection-start-column="39" selection-end-line="165" selection-end-column="39" />
+          <caret line="165" column="39" selection-start-line="165" selection-start-column="39" selection-end-line="165" selection-end-column="39" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
+            <marker date="1518749699559" expanded="true" signature="5125:5224" placeholder="SELECT * FRO... objects" />
           </folding>
         </state>
       </provider>
@@ -464,15 +730,14 @@
     <entry file="file://$PROJECT_DIR$/neo_body/hands.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
-          <caret line="4" column="65" lean-forward="true" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
-          <folding />
+          <caret line="4" column="65" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/neo_body/legs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
-          <caret line="22" column="10" lean-forward="false" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
@@ -482,9 +747,9 @@
     <entry file="file://$PROJECT_DIR$/main_manager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -492,7 +757,7 @@
     <entry file="file://$PROJECT_DIR$/pathfinder.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -500,7 +765,7 @@
     <entry file="file://$PROJECT_DIR$/raycast.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
-          <caret line="17" column="67" lean-forward="false" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
+          <caret line="17" column="67" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
@@ -510,9 +775,25 @@
     <entry file="file://$PROJECT_DIR$/neo_body/memory.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1659">
-          <caret line="83" column="25" lean-forward="false" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
+          <caret line="83" column="25" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
           <folding>
-            <element signature="e#0#21#0" expanded="false" />
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1518745890807" expanded="true" signature="1918:2074" placeholder="INSERT INTO OBJECTS... " />
+            <marker date="1518745890807" expanded="true" signature="2398:2481" placeholder="INSERT OR IG... ADJECTIVES" />
+            <marker date="1518745890807" expanded="true" signature="2659:2719" placeholder="SELECT adjec... ADJECTIVES" />
+            <marker date="1518745890807" expanded="true" signature="2908:2959" placeholder="SELECT objec... OBJECTS" />
+            <marker date="1518745890807" expanded="true" signature="3142:3291" placeholder="INSERT INTO OBJECT_DESCRIPTION... " />
+            <marker date="1518745890807" expanded="true" signature="3447:3494" placeholder="SELECT * FRO... OBJECTS" />
+            <marker date="1518745890807" expanded="true" signature="3933:3961" placeholder="DROP TABLE I... " />
+            <marker date="1518745890807" expanded="true" signature="3996:4416" placeholder="CREATE TABLE... OBJECTS" />
+            <marker date="1518745890807" expanded="true" signature="4491:4522" placeholder="DROP TABLE I... " />
+            <marker date="1518745890807" expanded="true" signature="4557:4938" placeholder="CREATE TABLE... ADJECTIVES" />
+            <marker date="1518745890807" expanded="true" signature="5040:5079" placeholder="DROP TABLE I... " />
+            <marker date="1518745890807" expanded="true" signature="5114:5430" placeholder="CREATE TABLE... OBJECT_DESCRIPTION" />
+            <marker date="1518745890807" expanded="true" signature="5466:5817" placeholder="CREATE TABLE... LOCATIONS" />
+            <marker date="1518745890807" expanded="true" signature="6658:6719" placeholder="INSERT INTO OBJECTS... " />
+            <marker date="1518745890807" expanded="true" signature="6658:6754" placeholder="INSERT INTO OBJECTS... " />
+            <marker date="1518745890807" expanded="true" signature="6857:6880" placeholder="SELECT * FRO... LOCATIONS" />
           </folding>
         </state>
       </provider>
@@ -520,15 +801,14 @@
     <entry file="file://$PROJECT_DIR$/map_builder.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3339">
-          <caret line="162" column="86" lean-forward="false" selection-start-line="162" selection-start-column="86" selection-end-line="162" selection-end-column="86" />
-          <folding />
+          <caret line="162" column="86" selection-start-line="162" selection-start-column="86" selection-end-line="162" selection-end-column="86" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/game_manager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1680">
-          <caret line="88" column="47" lean-forward="true" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
+          <caret line="88" column="47" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -538,15 +818,14 @@
     <entry file="file://$PROJECT_DIR$/neo_body/hands.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
-          <caret line="4" column="65" lean-forward="true" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
-          <folding />
+          <caret line="4" column="65" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/neo_body/legs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
-          <caret line="22" column="10" lean-forward="false" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
@@ -556,9 +835,9 @@
     <entry file="file://$PROJECT_DIR$/main_manager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -566,15 +845,14 @@
     <entry file="file://$PROJECT_DIR$/map_builder.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3570">
-          <caret line="173" column="8" lean-forward="true" selection-start-line="173" selection-start-column="8" selection-end-line="173" selection-end-column="8" />
-          <folding />
+          <caret line="173" column="8" selection-start-line="173" selection-start-column="8" selection-end-line="173" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pathfinder.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -582,7 +860,7 @@
     <entry file="file://$PROJECT_DIR$/raycast.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
-          <caret line="17" column="67" lean-forward="false" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
+          <caret line="17" column="67" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
@@ -592,9 +870,25 @@
     <entry file="file://$PROJECT_DIR$/neo_body/memory.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1659">
-          <caret line="83" column="25" lean-forward="false" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
+          <caret line="83" column="25" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
           <folding>
-            <element signature="e#0#21#0" expanded="false" />
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1518745890807" expanded="true" signature="1918:2074" placeholder="INSERT INTO OBJECTS... " />
+            <marker date="1518745890807" expanded="true" signature="2398:2481" placeholder="INSERT OR IG... ADJECTIVES" />
+            <marker date="1518745890807" expanded="true" signature="2659:2719" placeholder="SELECT adjec... ADJECTIVES" />
+            <marker date="1518745890807" expanded="true" signature="2908:2959" placeholder="SELECT objec... OBJECTS" />
+            <marker date="1518745890807" expanded="true" signature="3142:3291" placeholder="INSERT INTO OBJECT_DESCRIPTION... " />
+            <marker date="1518745890807" expanded="true" signature="3447:3494" placeholder="SELECT * FRO... OBJECTS" />
+            <marker date="1518745890807" expanded="true" signature="3933:3961" placeholder="DROP TABLE I... " />
+            <marker date="1518745890807" expanded="true" signature="3996:4416" placeholder="CREATE TABLE... OBJECTS" />
+            <marker date="1518745890807" expanded="true" signature="4491:4522" placeholder="DROP TABLE I... " />
+            <marker date="1518745890807" expanded="true" signature="4557:4938" placeholder="CREATE TABLE... ADJECTIVES" />
+            <marker date="1518745890807" expanded="true" signature="5040:5079" placeholder="DROP TABLE I... " />
+            <marker date="1518745890807" expanded="true" signature="5114:5430" placeholder="CREATE TABLE... OBJECT_DESCRIPTION" />
+            <marker date="1518745890807" expanded="true" signature="5466:5817" placeholder="CREATE TABLE... LOCATIONS" />
+            <marker date="1518745890807" expanded="true" signature="6658:6719" placeholder="INSERT INTO OBJECTS... " />
+            <marker date="1518745890807" expanded="true" signature="6658:6754" placeholder="INSERT INTO OBJECTS... " />
+            <marker date="1518745890807" expanded="true" signature="6857:6880" placeholder="SELECT * FRO... LOCATIONS" />
           </folding>
         </state>
       </provider>
@@ -602,33 +896,25 @@
     <entry file="file://$PROJECT_DIR$/neo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2940">
-          <caret line="157" column="33" lean-forward="true" selection-start-line="157" selection-start-column="33" selection-end-line="157" selection-end-column="33" />
+          <caret line="157" column="33" selection-start-line="157" selection-start-column="33" selection-end-line="157" selection-end-column="33" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
+            <marker date="1518749699559" expanded="true" signature="5125:5224" placeholder="SELECT * FRO... objects" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/house1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/neo_body/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/neo_body/hands.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
-          <caret line="14" column="82" lean-forward="false" selection-start-line="14" selection-start-column="82" selection-end-line="14" selection-end-column="82" />
-          <folding />
+          <caret line="14" column="82" selection-start-line="14" selection-start-column="82" selection-end-line="14" selection-end-column="82" />
         </state>
       </provider>
     </entry>
@@ -637,20 +923,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_manager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-441">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/agent.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
-          <caret line="4" column="113" lean-forward="false" selection-start-line="4" selection-start-column="113" selection-end-line="4" selection-end-column="113" />
+          <caret line="4" column="113" selection-start-line="4" selection-start-column="113" selection-end-line="4" selection-end-column="113" />
           <folding />
         </state>
       </provider>
@@ -658,9 +934,9 @@
     <entry file="file://$PROJECT_DIR$/bullet.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
-          <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -668,103 +944,42 @@
     <entry file="file://$PROJECT_DIR$/environment.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="471">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neo_body/wernicke_area.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/map_builder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2762">
-          <caret line="42" column="63" lean-forward="false" selection-start-line="42" selection-start-column="63" selection-end-line="42" selection-end-column="63" />
-          <folding />
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blue_player_pilot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Object.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-          <folding />
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/neo_body/eyes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="417">
-          <caret line="23" column="62" lean-forward="false" selection-start-line="23" selection-start-column="62" selection-end-line="23" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game_manager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="73" column="29" lean-forward="false" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Language DB tables.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neo_body/memory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="8" column="105" lean-forward="false" selection-start-line="8" selection-start-column="105" selection-end-line="8" selection-end-column="105" />
-          <folding />
+          <caret line="23" column="62" selection-start-line="23" selection-start-column="62" selection-end-line="23" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/neo_body/mouth.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="20" column="21" lean-forward="false" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="209" column="44" lean-forward="false" selection-start-line="209" selection-start-column="44" selection-end-line="209" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="323">
+          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/raycast.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+        <state relative-caret-position="374">
+          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
@@ -773,26 +988,121 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="46" lean-forward="false" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+        <state relative-caret-position="102">
+          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Language DB tables.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="72" column="20" selection-start-line="72" selection-start-column="20" selection-end-line="78" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/house1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/neo_body/ears.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="43" column="12" lean-forward="false" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
+        <state relative-caret-position="-24">
+          <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/game_manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neo_body/wernicke_area.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="89" column="34" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+            <marker date="1518750196093" expanded="true" signature="2343:2403" placeholder="SELECT adjec... ADJECTIVES" />
+            <marker date="1518750196093" expanded="true" signature="3477:3537" placeholder="SELECT adjec... ADJECTIVES" />
+            <marker date="1518750196093" expanded="true" signature="3854:3898" placeholder="SELECT LOCAT... LOCATIONS" />
+            <marker date="1518750196093" expanded="true" signature="3854:3920" placeholder="SELECT LOCAT... LOCATIONS" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neo_body/memory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="156" column="20" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1518745890807" expanded="true" signature="1918:2074" placeholder="INSERT INTO OBJECTS... " />
+            <marker date="1518745890807" expanded="true" signature="2398:2481" placeholder="INSERT OR IG... ADJECTIVES" />
+            <marker date="1518745890807" expanded="true" signature="2659:2719" placeholder="SELECT adjec... ADJECTIVES" />
+            <marker date="1518745890807" expanded="true" signature="2908:2959" placeholder="SELECT objec... OBJECTS" />
+            <marker date="1518745890807" expanded="true" signature="3142:3291" placeholder="INSERT INTO OBJECT_DESCRIPTION... " />
+            <marker date="1518745890807" expanded="true" signature="3447:3494" placeholder="SELECT * FRO... OBJECTS" />
+            <marker date="1518745890807" expanded="true" signature="3933:3961" placeholder="DROP TABLE I... " />
+            <marker date="1518745890807" expanded="true" signature="3996:4416" placeholder="CREATE TABLE... OBJECTS" />
+            <marker date="1518745890807" expanded="true" signature="4491:4522" placeholder="DROP TABLE I... " />
+            <marker date="1518745890807" expanded="true" signature="4557:4938" placeholder="CREATE TABLE... ADJECTIVES" />
+            <marker date="1518745890807" expanded="true" signature="5040:5079" placeholder="DROP TABLE I... " />
+            <marker date="1518745890807" expanded="true" signature="5114:5430" placeholder="CREATE TABLE... OBJECT_DESCRIPTION" />
+            <marker date="1518745890807" expanded="true" signature="5466:5817" placeholder="CREATE TABLE... LOCATIONS" />
+            <marker date="1518745890807" expanded="true" signature="6658:6719" placeholder="INSERT INTO OBJECTS... " />
+            <marker date="1518745890807" expanded="true" signature="6658:6754" placeholder="INSERT INTO OBJECTS... " />
+            <marker date="1518745890807" expanded="true" signature="6857:6880" placeholder="SELECT * FRO... LOCATIONS" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="235" column="0" selection-start-line="235" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1518749699559" expanded="true" signature="5125:5224" placeholder="SELECT * FRO... objects" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1337">
+          <caret line="82" column="8" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/neo_body/legs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="21" column="12" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+        <state relative-caret-position="265">
+          <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
@@ -801,19 +1111,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pathfinder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="59" column="118" lean-forward="true" selection-start-line="59" selection-start-column="118" selection-end-line="59" selection-end-column="118" />
+        <state relative-caret-position="118">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bot.py">
+    <entry file="file://$PROJECT_DIR$/map_builder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="79" column="8" lean-forward="false" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -21,6 +21,8 @@ class Memory(Agent):
         self.current_object_weight = None
         self.current_object_x_pos = None
         self.current_object_y_pos = None
+        self.current_x_pos = None
+        self.current_y_pos = None
         self.current_row_index = 1
         self.colors = {}
         self.weights = {}
@@ -109,6 +111,15 @@ class Memory(Agent):
                                adjective_id INTEGER REFERENCES ADJECTIVES (adjective_id) ON DELETE CASCADE
                               )""")
 
+            cursor.execute("""CREATE TABLE IF NOT EXISTS LOCATIONS
+                                (
+                                LOCATION_ID INTEGER PRIMARY KEY,
+                                LOCATION_NAME TEXT NOT NULL,
+                                LOCATION_X INTEGER NOT NULL,
+                                LOCATION_Y INTEGER NOT NULL
+                                )""")
+
+
 
 
             conn.commit()
@@ -125,6 +136,26 @@ class Memory(Agent):
 
         self.short_term_memory = cursor.fetchall()
         conn.close()
+
+    def save_location(self, location_name):
+        # get the x and y coordinates from the legs class
+        self.current_x_pos = self.ask("legs", 'x_pos')
+        self.current_y_pos = self.ask("legs", 'y_pos')
+        print("x_pos {} y_pos {}".format(self.current_x_pos, self.current_y_pos))
+
+        conn = sqlite3.connect('neo_test.db')
+
+        cursor = conn.cursor()
+
+        cursor.execute("INSERT INTO LOCATIONS (LOCATION_NAME, LOCATION_X, LOCATION_Y) "
+         "VALUES (:name, :x, :y)", {'name': location_name, 'x': self.current_x_pos, 'y': self.current_y_pos})
+
+        cursor.execute("SELECT * FROM LOCATIONS")
+        print(cursor.fetchall())
+
+        conn.commit()
+        conn.close()
+
 
 
 

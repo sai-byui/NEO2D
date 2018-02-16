@@ -1,6 +1,8 @@
 from agent import Agent
 import pygame
 
+NEO_STARTING_X = 550
+NEO_STARTING_Y = 200
 
 class Legs(Agent):
     """Allows NEO to move in its environment"""
@@ -11,7 +13,8 @@ class Legs(Agent):
         self.bot = self.share("neo", "bot")
         self.angle = self.ask("neo", "angle")
         self.original_image = self.share("neo", "original_image")
-        # self.position = self.ask("neo", "position")
+        self.x_pos = NEO_STARTING_X
+        self.y_pos = NEO_STARTING_Y
 
     def rotate(self):
         self.angle += 1
@@ -33,3 +36,6 @@ class Legs(Agent):
 
     def walk(self, dx, dy):
         self.bot.move(dx, dy)
+        self.x_pos = self.bot.rect.x
+        self.y_pos = self.bot.rect.y
+        # print("dx:{} dy:{}".format(self.x_pos, self.y_pos))

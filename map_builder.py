@@ -13,7 +13,7 @@ class MapBuilder(Agent):
         self.object_list = self.environment.get_object("object_list")
         self.map_with_nodes = []  # the map list that will have node positions inserted into it.
         self.node_list = []  # the list of each node found in our map
-        self.node_step = 1  # determines how many spaces are between each node in the graph
+        self.node_step = 5  # determines how many spaces are between each node in the graph
         self.GRID_INCREMENT = 12  # determines how much space is between wall blocks and nodes
         self.screen_width = self.ask("game_manager", "screen_width")
 
