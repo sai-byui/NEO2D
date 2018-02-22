@@ -93,7 +93,11 @@ class GameManager(Agent):
                 self.bullet_list.remove(bullet)
 
     def check_pygame_events(self):
-        """checks any for events such as keys pressed or A.I. actions that change the state of the game"""
+        """checks any for events such as keys pressed or A.I. actions that change the state of the game
+        USER KEY INPUT LIST:
+        t - starts training mode. See neo.run_training()
+        s - stop training mode. start scanning the room for objects
+        """
         for e in pygame.event.get():
             if e.type == pygame.QUIT:
                 self.running_game = False
@@ -101,6 +105,8 @@ class GameManager(Agent):
                 self.running_game = False
             if e.type == pygame.KEYDOWN and e.key == pygame.K_t:
                 self.neo.running_training = True
+            if e.type == pygame.KEYDOWN and e.key == pygame.K_s:
+                self.neo.running_training = False
 
     def draw(self):
         """displays the game images on the screen"""

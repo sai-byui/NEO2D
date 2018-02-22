@@ -86,7 +86,7 @@ class NEO(Agent):
 
         self.current_behavior = BEHAVIOR_STATE.SCANNING
         self.pathfinder = Pathfinder()
-        self.running_training = False
+        self.running_training = True
 
         self.sql_statement = None
 
