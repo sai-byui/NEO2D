@@ -8,7 +8,7 @@ within machines. This project is a continuation of our Society's previous projec
 environment. For this semester project Neo will be moving within a 2D visual environment. The project combines our pathfinding work from 
 [Bot-Arena-3](https://github.com/sai-byui/bot-arena-3) and our database architecture from NEO version 1.
 
-If you would like to read a high level description of the natural language aspect of the project and it's various components, please see the [NEO NLP Project Documentation.docx](https://github.com/sai-byui/NEO2D/blob/master/NEO%20NLP%20Project%20Documentation.docx) file in this repo. 
+If you would like to read a high level description of the natural language aspect of the project and it's various components, please see the [NEO NLP Project Documentation.docx](https://github.com/sai-byui/NEO2D/blob/master/documentation/NEO%20NLP%20Project%20Documentation.docx) file in this repo. 
 
 This program runs off of python 3.6+ code. You will need to install 3.6 or higher to run the project.
 The project also uses the pygame library to create the visuals and pyttsx3 to generate Neo's voice. Both libraries will need to be 
