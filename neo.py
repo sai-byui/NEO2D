@@ -236,6 +236,7 @@ class NEO(Agent):
                 self.wernicke_area.parse_command(command)
                 location_coordinates = self.ask("wernicke_area", "location_coordinates")
                 self.update_coordinates()
+                # to do: add division between tasks
                 self.path_course = self.pathfinder.find_path(location_coordinates)
                 self.current_behavior = BEHAVIOR_STATE.PATH_FINDING
                 # print(self.path_course)

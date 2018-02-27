@@ -44,17 +44,18 @@ class Memory(Agent):
         cursor = conn.cursor()
 
         # insert the object into the objects table along with its attributes
-        cursor.execute("INSERT INTO OBJECTS (object_name, object_color, object_weight, object_x_pos, object_y_pos) "
-                       "VALUES (:name, :color, :weight, :x, :y)",
-                       {'name': self.current_object_name, 'color': self.current_object_color,
-                        'weight': self.current_object_weight, 'x': self.current_object_x_pos,
-                        'y': self.current_object_y_pos})
+        cursor.execute("INSERT INTO OBJECTS (object_name) "
+                       "VALUES (:name)",
+                       {'name': self.current_object_name})
+
         # insert the color into the adjective table
-        cursor.execute("INSERT OR IGNORE INTO ADJECTIVES (adjective_name, category) VALUES (:name, 'color')",
+        cursor.execute("INSERT OR IGNORE INTO ADJECTIVES (adjective_name) VALUES (:name)",
                        {'name': self.current_object_color})
+
         # get the id of the adjective so we can link it to the object in the linking table
         cursor.execute("SELECT adjective_id FROM ADJECTIVES WHERE adjective_name = ?", (self.current_object_color,))
         adjective_id = cursor.fetchone()[0]
+
         # get the id of the object so we can link it to the object in the linking table
         cursor.execute("SELECT object_id FROM OBJECTS WHERE object_name = ?", (self.current_object_name,))
         object_id = cursor.fetchone()[0]
@@ -81,34 +82,83 @@ class Memory(Agent):
 
             cursor = conn.cursor()
 
-            cursor.execute("""DROP TABLE IF EXISTS OBJECTS""")
+            # cursor.execute("""DROP TABLE IF EXISTS OBJECTS""")
             cursor.execute("""CREATE TABLE IF NOT EXISTS OBJECTS
                               (
-                               object_id INTEGER PRIMARY KEY ,
-                               OBJECT_NAME TEXT,
-                               OBJECT_COLOR TEXT,
-                               OBJECT_WEIGHT NUMERIC,
-                               OBJECT_X_POS INTEGER,
-                               OBJECT_Y_POS INTEGER
+                               object_id INTEGER PRIMARY KEY,
+                               OBJECT_NAME TEXT
                                )""")
 
-            # creating adjective table
-            cursor.execute("""DROP TABLE IF EXISTS ADJECTIVES""")
+            # this table hold all the commands that neo is familiar with
+            cursor.execute("""CREATE TABLE IF NOT EXISTS VERBS
+              (
+               VERB_ID INTEGER PRIMARY KEY,
+               VERB_NAME TEXT
+               )""")
+
+            # This table holds quantifier info (some, all, both, etc.)
+            cursor.execute("""CREATE TABLE IF NOT EXISTS QUANTIFIERS
+              (
+               q_id INTEGER REFERENCES OBJECTS (object_id),
+               q_name TEXT
+               )
+              """)
+
+            # table for holding adjective keywords(red, heavy, soft etc.)
+            # cursor.execute("""DROP TABLE IF EXISTS ADJECTIVES""")
             cursor.execute("""CREATE TABLE IF NOT EXISTS ADJECTIVES
                                   (
                                    adjective_id INTEGER PRIMARY KEY ,
-                                   adjective_name UNIQUE,
-                                   category TEXT,
-                                   less_than,
-                                   greater_than
+                                   adjective_name UNIQUE
                                   )""")
 
+            cursor.execute("""CREATE TABLE IF NOT EXISTS ATTRIBUTES
+                (
+                 ATTRIBUTE_ID INTEGER PRIMARY KEY ,
+                 ATTRIBUTE_NAME TEXT UNIQUE NOT NULL
+                 )""")
+
+            # comparators are used for neo to compare similar attributes
+            # of different objects
+            cursor.execute("""CREATE TABLE IF NOT EXISTS COMPARATORS
+              (
+               COMPARATOR_ID INTEGER PRIMARY KEY,
+               LESS_THAN TEXT,
+               GREATER_THAN TEXT,
+               EQUAL TEXT
+               )""")
+
+            # this table links which attributes are connected to certain comparative words
+            # ex.('heavier' is related to the attribute 'weight')
+            cursor.execute("""CREATE TABLE IF NOT EXISTS ATTRIBUTE_COMPARATORS
+              (
+               ATTRIBUTE_ID INTEGER REFERENCES ATTRIBUTES (ATTRIBUTE_ID),
+               COMPARATOR_ID INTEGER REFERENCES COMPARATORS (COMPARATOR_ID)
+               )""")
+
+            # this table holds category keywords (food, liquid, weapon, etc.)
+            cursor.execute("""CREATE TABLE IF NOT EXISTS CATEGORIES
+                (
+                 CATEGORY_ID INTEGER PRIMARY KEY ,
+                 CATEGORY_NAME TEXT UNIQUE NOT NULL
+                 )""")
+
+            # links categories to objects (an apple is a fruit, food, plant, etc.)
+            cursor.execute("""CREATE TABLE IF NOT EXISTS OBJECT_CATEGORIES
+              (
+               OBJECT_ID INTEGER REFERENCES OBJECTS (OBJECT_ID),
+               CATEGORY_ID INTEGER REFERENCES CATEGORIES (CATEGORY_ID)
+               )""")
+
             # create linking table between objects and adjectives
-            cursor.execute("""DROP TABLE IF EXISTS OBJECT_DESCRIPTION""")
+            # the attribute value holds the value for the particular attribute of each object
+            # ex. apple, color, 'red'
+            # cursor.execute("""DROP TABLE IF EXISTS OBJECT_DESCRIPTION""")
             cursor.execute("""CREATE TABLE IF NOT EXISTS OBJECT_DESCRIPTION
                               (
                                object_id INTEGER REFERENCES OBJECTS (object_id) ON DELETE CASCADE ,
-                               adjective_id INTEGER REFERENCES ADJECTIVES (adjective_id) ON DELETE CASCADE
+                               attribute_id INTEGER REFERENCES ADJECTIVES (adjective_id) ON DELETE CASCADE,
+                               attribute_value
                               )""")
 
             cursor.execute("""CREATE TABLE IF NOT EXISTS LOCATIONS
@@ -119,8 +169,14 @@ class Memory(Agent):
                                 LOCATION_Y INTEGER NOT NULL
                                 )""")
 
-
-
+        # this table links the adjective key words with the attribute key words
+        # (ex. the adjective 'red' is a type of the attribute 'color'
+            # cursor.execute("""DROP TABLE IF EXISTS ADJECTIVE_TYPE""")
+            cursor.execute("""CREATE TABLE IF NOT EXISTS ADJECTIVE_TYPE
+                                  (
+                                   attribute_id INTEGER REFERENCES ATTRIBUTES (attribute_id),
+                                   adjective_id INTEGER REFERENCES ADJECTIVES (adjective_id)
+                                  )""")
 
             conn.commit()
             conn.close()

@@ -92,13 +92,18 @@ class Wernicke_Area(Agent):
         cursor = conn.cursor()
         word_array = command.split()
         for word in word_array:
-            cursor.execute("SELECT location_id FROM LOCATIONS WHERE location_name LIKE ?", (word.lower() + '%',))
-            result = cursor.fetchone()
-            if result:
-                self.location_list.append(result[0])
-                print(self.location_list[0])
+            if word == "search":
+                self.search_for_objects()
+                break
+            else:
+                cursor.execute("SELECT location_id FROM LOCATIONS WHERE location_name LIKE ?", (word.lower() + '%',))
+                result = cursor.fetchone()
+                if result:
+                    self.location_list.append(result[0])
+                    print(self.location_list[0])
+                    self.determine_location(cursor)
 
-        self.determine_location(cursor)
+
         conn.close()
 
     def determine_location(self, cursor):
@@ -106,4 +111,9 @@ class Wernicke_Area(Agent):
         result = cursor.fetchone()
         self.location_coordinates = result
         print(result)
+
+    def search_for_objects(self):
+        pass
+
+
 
