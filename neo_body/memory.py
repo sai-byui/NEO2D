@@ -178,6 +178,12 @@ class Memory(Agent):
                                    adjective_id INTEGER REFERENCES ADJECTIVES (adjective_id)
                                   )""")
 
+            cursor.execute("""CREATE TABLE IF NOT EXISTS VERB_CATEGORIES
+              (
+               VERB_ID INTEGER REFERENCES VERBS (VERB_ID),
+               CATEGORY_ID INTEGER REFERENCES CATEGORIES (CATEGORY_ID)
+               )""")
+
             conn.commit()
             conn.close()
 

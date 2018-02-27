@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5e0127a-ef1a-40ef-8454-ff2433977d29" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/documentation/NEO DB ERD.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Language DB tables.txt" afterPath="$PROJECT_DIR$/documentation/Language DB tables.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/NEO NLP Project Documentation.docx" afterPath="$PROJECT_DIR$/documentation/NEO NLP Project Documentation.docx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/SQL INSERT STATEMENTS.sql" afterPath="$PROJECT_DIR$/documentation/SQL INSERT STATEMENTS.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game_manager.py" afterPath="$PROJECT_DIR$/game_manager.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neo.py" afterPath="$PROJECT_DIR$/neo.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neo_body/memory.py" afterPath="$PROJECT_DIR$/neo_body/memory.py" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,10 +19,27 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/NEO2D$main_manager.coverage" NAME="main_manager Coverage Results" MODIFIED="1519330311835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NEO2D$main_manager.coverage" NAME="main_manager Coverage Results" MODIFIED="1519719275574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Sqlite (Xerial) - neo_test.db" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -27,100 +47,90 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="legs.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/neo_body/legs.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pathfinder.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pathfinder.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1122">
-              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ears.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/neo_body/ears.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="memory.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neo_body/memory.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2584">
-              <caret line="156" column="20" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
+            <state relative-caret-position="210">
+              <caret line="180" column="30" selection-start-line="180" selection-start-column="30" selection-end-line="184" selection-end-column="16" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-                <marker date="1518745890807" expanded="true" signature="1918:2074" placeholder="INSERT INTO OBJECTS... " />
-                <marker date="1518745890807" expanded="true" signature="2398:2481" placeholder="INSERT OR IG... ADJECTIVES" />
-                <marker date="1518745890807" expanded="true" signature="2659:2719" placeholder="SELECT adjec... ADJECTIVES" />
-                <marker date="1518745890807" expanded="true" signature="2908:2959" placeholder="SELECT objec... OBJECTS" />
-                <marker date="1518745890807" expanded="true" signature="3142:3291" placeholder="INSERT INTO OBJECT_DESCRIPTION... " />
-                <marker date="1518745890807" expanded="true" signature="3447:3494" placeholder="SELECT * FRO... OBJECTS" />
-                <marker date="1518745890807" expanded="true" signature="3933:3961" placeholder="DROP TABLE I... " />
-                <marker date="1518745890807" expanded="true" signature="3996:4416" placeholder="CREATE TABLE... OBJECTS" />
-                <marker date="1518745890807" expanded="true" signature="4491:4522" placeholder="DROP TABLE I... " />
-                <marker date="1518745890807" expanded="true" signature="4557:4938" placeholder="CREATE TABLE... ADJECTIVES" />
-                <marker date="1518745890807" expanded="true" signature="5040:5079" placeholder="DROP TABLE I... " />
-                <marker date="1518745890807" expanded="true" signature="5114:5430" placeholder="CREATE TABLE... OBJECT_DESCRIPTION" />
-                <marker date="1518745890807" expanded="true" signature="5466:5817" placeholder="CREATE TABLE... LOCATIONS" />
-                <marker date="1518745890807" expanded="true" signature="6658:6719" placeholder="INSERT INTO OBJECTS... " />
-                <marker date="1518745890807" expanded="true" signature="6658:6754" placeholder="INSERT INTO OBJECTS... " />
-                <marker date="1518745890807" expanded="true" signature="6857:6880" placeholder="SELECT * FRO... LOCATIONS" />
+                <marker date="1519725433459" expanded="true" signature="1918:1992" placeholder="INSERT INTO OBJECTS... " />
+                <marker date="1519725433459" expanded="true" signature="2131:2195" placeholder="INSERT OR IG... ADJECTIVES" />
+                <marker date="1519725433459" expanded="true" signature="2374:2434" placeholder="SELECT adjec... ADJECTIVES" />
+                <marker date="1519725433459" expanded="true" signature="2624:2675" placeholder="SELECT objec... OBJECTS" />
+                <marker date="1519725433459" expanded="true" signature="2858:3007" placeholder="INSERT INTO OBJECT_DESCRIPTION... " />
+                <marker date="1519725433459" expanded="true" signature="3163:3210" placeholder="SELECT * FRO... OBJECTS" />
+                <marker date="1519725433459" expanded="true" signature="3651:3679" placeholder="DROP TABLE I... " />
+                <marker date="1519725433459" expanded="true" signature="3714:3923" placeholder="CREATE TABLE... OBJECTS" />
+                <marker date="1519725433459" expanded="true" signature="4032:4171" placeholder="CREATE TABLE... VERBS" />
+                <marker date="1519725433459" expanded="true" signature="4278:4436" placeholder="CREATE TABLE... QUANTIFIERS" />
+                <marker date="1519725433459" expanded="true" signature="4563:4594" placeholder="DROP TABLE I... " />
+                <marker date="1519725433459" expanded="true" signature="4629:4865" placeholder="CREATE TABLE... ADJECTIVES" />
+                <marker date="1519725433459" expanded="true" signature="4901:5080" placeholder="CREATE TABLE... ATTRIBUTES" />
+                <marker date="1519725433459" expanded="true" signature="5224:5436" placeholder="CREATE TABLE... COMPARATORS" />
+                <marker date="1519725433459" expanded="true" signature="5629:5860" placeholder="CREATE TABLE... ATTRIBUTE_COMPARATORS" />
+                <marker date="1519725433459" expanded="true" signature="5974:6151" placeholder="CREATE TABLE... CATEGORIES" />
+                <marker date="1519725433459" expanded="true" signature="6270:6483" placeholder="CREATE TABLE... OBJECT_CATEGORIES" />
+                <marker date="1519725433459" expanded="true" signature="6719:6758" placeholder="DROP TABLE I... " />
+                <marker date="1519725433459" expanded="true" signature="6793:7157" placeholder="CREATE TABLE... OBJECT_DESCRIPTION" />
+                <marker date="1519725433459" expanded="true" signature="7193:7544" placeholder="CREATE TABLE... LOCATIONS" />
+                <marker date="1519725433459" expanded="true" signature="7732:7753" placeholder="DROP TABLE I... " />
+                <marker date="1519725433459" expanded="true" signature="7732:7767" placeholder="DROP TABLE I... " />
+                <marker date="1519725433459" expanded="true" signature="7802:8066" placeholder="CREATE TABLE... OBJECT_DESCRIPTION" />
+                <marker date="1519725433459" expanded="true" signature="7802:8102" placeholder="CREATE TABLE... OBJECT_DESCRIPTION" />
+                <marker date="1519725433459" expanded="true" signature="8138:8343" placeholder="CREATE TABLE... VERB_CATEGORIES" />
+                <marker date="1519725433459" expanded="true" signature="9181:9242" placeholder="INSERT INTO OBJECTS... " />
+                <marker date="1519725433459" expanded="true" signature="9181:9277" placeholder="INSERT INTO OBJECTS... " />
+                <marker date="1519725433459" expanded="true" signature="9380:9403" placeholder="SELECT * FRO... LOCATIONS" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="neo.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/neo.py">
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4327ef47-c2e1-4e99-8f5d-4190de6a3742/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1878">
-              <caret line="88" column="36" selection-start-line="88" selection-start-column="36" selection-end-line="88" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-                <marker date="1519321016854" expanded="true" signature="5124:5223" placeholder="SELECT * FRO... objects" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="game_manager.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/game_manager.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="108" column="49" selection-start-line="108" selection-start-column="49" selection-end-line="108" selection-end-column="49" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main_manager.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main_manager.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+            <state relative-caret-position="68">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VERBS" pinned="false" current-in-tab="true">
+        <entry file="dbDummy://dbtable:/f1b76a18/4327ef47-c2e1-4e99-8f5d-4190de6a3742/VERBS">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ADJECTIVE_TYPE" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/f1b76a18/4327ef47-c2e1-4e99-8f5d-4190de6a3742/ADJECTIVE_TYPE">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NEO DB ERD.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/documentation/NEO DB ERD.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -143,19 +153,21 @@
         <option value="$PROJECT_DIR$/blue_player_pilot.py" />
         <option value="$PROJECT_DIR$/bullet.py" />
         <option value="$PROJECT_DIR$/environment.py" />
-        <option value="$PROJECT_DIR$/Object.py" />
         <option value="$PROJECT_DIR$/raycast.py" />
         <option value="$PROJECT_DIR$/neo_body/ears.py" />
         <option value="$PROJECT_DIR$/neo_body/mouth.py" />
         <option value="$PROJECT_DIR$/pathfinder.py" />
         <option value="$PROJECT_DIR$/bot.py" />
         <option value="$PROJECT_DIR$/Language DB tables.txt" />
-        <option value="$PROJECT_DIR$/neo_body/memory.py" />
-        <option value="$PROJECT_DIR$/neo_body/wernicke_area.py" />
         <option value="$PROJECT_DIR$/neo_body/legs.py" />
         <option value="$PROJECT_DIR$/map_builder.py" />
-        <option value="$PROJECT_DIR$/neo.py" />
         <option value="$PROJECT_DIR$/game_manager.py" />
+        <option value="$PROJECT_DIR$/Object.py" />
+        <option value="$PROJECT_DIR$/neo_body/wernicke_area.py" />
+        <option value="$PROJECT_DIR$/neo.py" />
+        <option value="dbtable:/f1b76a18/4327ef47-c2e1-4e99-8f5d-4190de6a3742/LOCATIONS" />
+        <option value="$PROJECT_DIR$/neo_body/memory.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/4327ef47-c2e1-4e99-8f5d-4190de6a3742/console.sql" />
       </list>
     </option>
   </component>
@@ -230,6 +242,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NEO2D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NEO2D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="documentation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -238,6 +264,18 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Sqlite (Xerial)" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/neo_test.db" />
+    <property name="Console.TableResult.DefaultCopyAction" value="SQL Insert Statements" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Landon\Documents\7th Semester\NEO2D\documentation" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Landon\Documents\7th Semester\NEO2D\documentation" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -522,20 +560,35 @@
       <option name="project" value="LOCAL" />
       <updated>1518750809729</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Neo starts in training mode, added scanning mode">
+      <created>1519330400054</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1519330400054</updated>
+    </task>
+    <task id="LOCAL-00005" summary="finished database framework">
+      <created>1519719549943</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1519719549943</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24377745" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24377745" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.193265" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -550,6 +603,29 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24377745" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.193265" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39937106" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -566,198 +642,24 @@
     <MESSAGE value="added locations DB table" />
     <MESSAGE value="added training mode to teach neo about locations" />
     <MESSAGE value="Neo can now learn about locations and move to different rooms!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Neo can now learn about locations and move to different rooms!" />
+    <MESSAGE value="Neo starts in training mode, added scanning mode" />
+    <MESSAGE value="finished database framework" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished database framework" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/neo.py</url>
-          <line>234</line>
-          <option name="timeStamp" value="7" />
+          <url>file://$PROJECT_DIR$/neo_body/wernicke_area.py</url>
+          <line>92</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="10" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/neo_body/hands.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="82" selection-start-line="14" selection-start-column="82" selection-end-line="14" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neo_body/eyes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="23" column="81" selection-start-line="23" selection-start-column="81" selection-end-line="23" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neo_body/memory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="27" column="70" selection-start-line="27" selection-start-column="70" selection-end-line="27" selection-end-column="70" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <marker date="1518745890807" expanded="true" signature="1918:2074" placeholder="INSERT INTO OBJECTS... " />
-            <marker date="1518745890807" expanded="true" signature="2398:2481" placeholder="INSERT OR IG... ADJECTIVES" />
-            <marker date="1518745890807" expanded="true" signature="2659:2719" placeholder="SELECT adjec... ADJECTIVES" />
-            <marker date="1518745890807" expanded="true" signature="2908:2959" placeholder="SELECT objec... OBJECTS" />
-            <marker date="1518745890807" expanded="true" signature="3142:3291" placeholder="INSERT INTO OBJECT_DESCRIPTION... " />
-            <marker date="1518745890807" expanded="true" signature="3447:3494" placeholder="SELECT * FRO... OBJECTS" />
-            <marker date="1518745890807" expanded="true" signature="3933:3961" placeholder="DROP TABLE I... " />
-            <marker date="1518745890807" expanded="true" signature="3996:4416" placeholder="CREATE TABLE... OBJECTS" />
-            <marker date="1518745890807" expanded="true" signature="4491:4522" placeholder="DROP TABLE I... " />
-            <marker date="1518745890807" expanded="true" signature="4557:4938" placeholder="CREATE TABLE... ADJECTIVES" />
-            <marker date="1518745890807" expanded="true" signature="5040:5079" placeholder="DROP TABLE I... " />
-            <marker date="1518745890807" expanded="true" signature="5114:5430" placeholder="CREATE TABLE... OBJECT_DESCRIPTION" />
-            <marker date="1518745890807" expanded="true" signature="5466:5817" placeholder="CREATE TABLE... LOCATIONS" />
-            <marker date="1518745890807" expanded="true" signature="6658:6719" placeholder="INSERT INTO OBJECTS... " />
-            <marker date="1518745890807" expanded="true" signature="6658:6754" placeholder="INSERT INTO OBJECTS... " />
-            <marker date="1518745890807" expanded="true" signature="6857:6880" placeholder="SELECT * FRO... LOCATIONS" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neo_body/mouth.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neo_body/wernicke_area.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-            <marker date="1518750196093" expanded="true" signature="2343:2403" placeholder="SELECT adjec... ADJECTIVES" />
-            <marker date="1518750196093" expanded="true" signature="3477:3537" placeholder="SELECT adjec... ADJECTIVES" />
-            <marker date="1518750196093" expanded="true" signature="3854:3898" placeholder="SELECT LOCAT... LOCATIONS" />
-            <marker date="1518750196093" expanded="true" signature="3854:3920" placeholder="SELECT LOCAT... LOCATIONS" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apple.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blue_player_pilot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game_manager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="88" column="47" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3108">
-          <caret line="165" column="39" selection-start-line="165" selection-start-column="39" selection-end-line="165" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <marker date="1519321016854" expanded="true" signature="5124:5223" placeholder="SELECT * FRO... objects" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neo_body/hands.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="65" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neo_body/legs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_manager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pathfinder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/raycast.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="17" column="67" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neo_body/memory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1659">
-          <caret line="83" column="25" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <marker date="1518745890807" expanded="true" signature="1918:2074" placeholder="INSERT INTO OBJECTS... " />
-            <marker date="1518745890807" expanded="true" signature="2398:2481" placeholder="INSERT OR IG... ADJECTIVES" />
-            <marker date="1518745890807" expanded="true" signature="2659:2719" placeholder="SELECT adjec... ADJECTIVES" />
-            <marker date="1518745890807" expanded="true" signature="2908:2959" placeholder="SELECT objec... OBJECTS" />
-            <marker date="1518745890807" expanded="true" signature="3142:3291" placeholder="INSERT INTO OBJECT_DESCRIPTION... " />
-            <marker date="1518745890807" expanded="true" signature="3447:3494" placeholder="SELECT * FRO... OBJECTS" />
-            <marker date="1518745890807" expanded="true" signature="3933:3961" placeholder="DROP TABLE I... " />
-            <marker date="1518745890807" expanded="true" signature="3996:4416" placeholder="CREATE TABLE... OBJECTS" />
-            <marker date="1518745890807" expanded="true" signature="4491:4522" placeholder="DROP TABLE I... " />
-            <marker date="1518745890807" expanded="true" signature="4557:4938" placeholder="CREATE TABLE... ADJECTIVES" />
-            <marker date="1518745890807" expanded="true" signature="5040:5079" placeholder="DROP TABLE I... " />
-            <marker date="1518745890807" expanded="true" signature="5114:5430" placeholder="CREATE TABLE... OBJECT_DESCRIPTION" />
-            <marker date="1518745890807" expanded="true" signature="5466:5817" placeholder="CREATE TABLE... LOCATIONS" />
-            <marker date="1518745890807" expanded="true" signature="6658:6719" placeholder="INSERT INTO OBJECTS... " />
-            <marker date="1518745890807" expanded="true" signature="6658:6754" placeholder="INSERT INTO OBJECTS... " />
-            <marker date="1518745890807" expanded="true" signature="6857:6880" placeholder="SELECT * FRO... LOCATIONS" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/map_builder.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3339">
@@ -769,9 +671,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1680">
           <caret line="88" column="47" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -786,9 +685,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
           <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -796,7 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -811,7 +706,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -828,22 +722,34 @@
           <caret line="83" column="25" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <marker date="1518745890807" expanded="true" signature="1918:2074" placeholder="INSERT INTO OBJECTS... " />
-            <marker date="1518745890807" expanded="true" signature="2398:2481" placeholder="INSERT OR IG... ADJECTIVES" />
-            <marker date="1518745890807" expanded="true" signature="2659:2719" placeholder="SELECT adjec... ADJECTIVES" />
-            <marker date="1518745890807" expanded="true" signature="2908:2959" placeholder="SELECT objec... OBJECTS" />
-            <marker date="1518745890807" expanded="true" signature="3142:3291" placeholder="INSERT INTO OBJECT_DESCRIPTION... " />
-            <marker date="1518745890807" expanded="true" signature="3447:3494" placeholder="SELECT * FRO... OBJECTS" />
-            <marker date="1518745890807" expanded="true" signature="3933:3961" placeholder="DROP TABLE I... " />
-            <marker date="1518745890807" expanded="true" signature="3996:4416" placeholder="CREATE TABLE... OBJECTS" />
-            <marker date="1518745890807" expanded="true" signature="4491:4522" placeholder="DROP TABLE I... " />
-            <marker date="1518745890807" expanded="true" signature="4557:4938" placeholder="CREATE TABLE... ADJECTIVES" />
-            <marker date="1518745890807" expanded="true" signature="5040:5079" placeholder="DROP TABLE I... " />
-            <marker date="1518745890807" expanded="true" signature="5114:5430" placeholder="CREATE TABLE... OBJECT_DESCRIPTION" />
-            <marker date="1518745890807" expanded="true" signature="5466:5817" placeholder="CREATE TABLE... LOCATIONS" />
-            <marker date="1518745890807" expanded="true" signature="6658:6719" placeholder="INSERT INTO OBJECTS... " />
-            <marker date="1518745890807" expanded="true" signature="6658:6754" placeholder="INSERT INTO OBJECTS... " />
-            <marker date="1518745890807" expanded="true" signature="6857:6880" placeholder="SELECT * FRO... LOCATIONS" />
+            <marker date="1519725433459" expanded="true" signature="1918:1992" placeholder="INSERT INTO OBJECTS... " />
+            <marker date="1519725433459" expanded="true" signature="2131:2195" placeholder="INSERT OR IG... ADJECTIVES" />
+            <marker date="1519725433459" expanded="true" signature="2374:2434" placeholder="SELECT adjec... ADJECTIVES" />
+            <marker date="1519725433459" expanded="true" signature="2624:2675" placeholder="SELECT objec... OBJECTS" />
+            <marker date="1519725433459" expanded="true" signature="2858:3007" placeholder="INSERT INTO OBJECT_DESCRIPTION... " />
+            <marker date="1519725433459" expanded="true" signature="3163:3210" placeholder="SELECT * FRO... OBJECTS" />
+            <marker date="1519725433459" expanded="true" signature="3651:3679" placeholder="DROP TABLE I... " />
+            <marker date="1519725433459" expanded="true" signature="3714:3923" placeholder="CREATE TABLE... OBJECTS" />
+            <marker date="1519725433459" expanded="true" signature="4032:4171" placeholder="CREATE TABLE... VERBS" />
+            <marker date="1519725433459" expanded="true" signature="4278:4436" placeholder="CREATE TABLE... QUANTIFIERS" />
+            <marker date="1519725433459" expanded="true" signature="4563:4594" placeholder="DROP TABLE I... " />
+            <marker date="1519725433459" expanded="true" signature="4629:4865" placeholder="CREATE TABLE... ADJECTIVES" />
+            <marker date="1519725433459" expanded="true" signature="4901:5080" placeholder="CREATE TABLE... ATTRIBUTES" />
+            <marker date="1519725433459" expanded="true" signature="5224:5436" placeholder="CREATE TABLE... COMPARATORS" />
+            <marker date="1519725433459" expanded="true" signature="5629:5860" placeholder="CREATE TABLE... ATTRIBUTE_COMPARATORS" />
+            <marker date="1519725433459" expanded="true" signature="5974:6151" placeholder="CREATE TABLE... CATEGORIES" />
+            <marker date="1519725433459" expanded="true" signature="6270:6483" placeholder="CREATE TABLE... OBJECT_CATEGORIES" />
+            <marker date="1519725433459" expanded="true" signature="6719:6758" placeholder="DROP TABLE I... " />
+            <marker date="1519725433459" expanded="true" signature="6793:7157" placeholder="CREATE TABLE... OBJECT_DESCRIPTION" />
+            <marker date="1519725433459" expanded="true" signature="7193:7544" placeholder="CREATE TABLE... LOCATIONS" />
+            <marker date="1519725433459" expanded="true" signature="7732:7753" placeholder="DROP TABLE I... " />
+            <marker date="1519725433459" expanded="true" signature="7732:7767" placeholder="DROP TABLE I... " />
+            <marker date="1519725433459" expanded="true" signature="7802:8066" placeholder="CREATE TABLE... OBJECT_DESCRIPTION" />
+            <marker date="1519725433459" expanded="true" signature="7802:8102" placeholder="CREATE TABLE... OBJECT_DESCRIPTION" />
+            <marker date="1519725433459" expanded="true" signature="8138:8343" placeholder="CREATE TABLE... VERB_CATEGORIES" />
+            <marker date="1519725433459" expanded="true" signature="9181:9242" placeholder="INSERT INTO OBJECTS... " />
+            <marker date="1519725433459" expanded="true" signature="9181:9277" placeholder="INSERT INTO OBJECTS... " />
+            <marker date="1519725433459" expanded="true" signature="9380:9403" placeholder="SELECT * FRO... LOCATIONS" />
           </folding>
         </state>
       </provider>
@@ -852,10 +758,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2940">
           <caret line="157" column="33" selection-start-line="157" selection-start-column="33" selection-end-line="157" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <marker date="1519321016854" expanded="true" signature="5124:5223" placeholder="SELECT * FRO... objects" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -907,13 +809,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Object.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/neo_body/eyes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="417">
@@ -942,10 +837,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Language DB tables.txt">
+    <entry file="file://$PROJECT_DIR$/neo_body/ears.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="72" column="20" selection-start-line="72" selection-start-column="20" selection-end-line="78" selection-end-column="4" />
+        <state relative-caret-position="731">
+          <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1343">
+          <caret line="82" column="8" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Object.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/map_builder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -956,116 +872,286 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/neo_body/ears.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1343">
-          <caret line="82" column="8" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/neo_body/legs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
           <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pathfinder.py">
+    <entry file="file://$PROJECT_DIR$/documentation/Language DB tables.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neo_body/memory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2584">
-          <caret line="156" column="20" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <marker date="1518745890807" expanded="true" signature="1918:2074" placeholder="INSERT INTO OBJECTS... " />
-            <marker date="1518745890807" expanded="true" signature="2398:2481" placeholder="INSERT OR IG... ADJECTIVES" />
-            <marker date="1518745890807" expanded="true" signature="2659:2719" placeholder="SELECT adjec... ADJECTIVES" />
-            <marker date="1518745890807" expanded="true" signature="2908:2959" placeholder="SELECT objec... OBJECTS" />
-            <marker date="1518745890807" expanded="true" signature="3142:3291" placeholder="INSERT INTO OBJECT_DESCRIPTION... " />
-            <marker date="1518745890807" expanded="true" signature="3447:3494" placeholder="SELECT * FRO... OBJECTS" />
-            <marker date="1518745890807" expanded="true" signature="3933:3961" placeholder="DROP TABLE I... " />
-            <marker date="1518745890807" expanded="true" signature="3996:4416" placeholder="CREATE TABLE... OBJECTS" />
-            <marker date="1518745890807" expanded="true" signature="4491:4522" placeholder="DROP TABLE I... " />
-            <marker date="1518745890807" expanded="true" signature="4557:4938" placeholder="CREATE TABLE... ADJECTIVES" />
-            <marker date="1518745890807" expanded="true" signature="5040:5079" placeholder="DROP TABLE I... " />
-            <marker date="1518745890807" expanded="true" signature="5114:5430" placeholder="CREATE TABLE... OBJECT_DESCRIPTION" />
-            <marker date="1518745890807" expanded="true" signature="5466:5817" placeholder="CREATE TABLE... LOCATIONS" />
-            <marker date="1518745890807" expanded="true" signature="6658:6719" placeholder="INSERT INTO OBJECTS... " />
-            <marker date="1518745890807" expanded="true" signature="6658:6754" placeholder="INSERT INTO OBJECTS... " />
-            <marker date="1518745890807" expanded="true" signature="6857:6880" placeholder="SELECT * FRO... LOCATIONS" />
-          </folding>
+        <state relative-caret-position="442">
+          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/neo_body/wernicke_area.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1700">
-          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+        <state relative-caret-position="1802">
+          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
-            <marker date="1518750196093" expanded="true" signature="2343:2403" placeholder="SELECT adjec... ADJECTIVES" />
-            <marker date="1518750196093" expanded="true" signature="3477:3537" placeholder="SELECT adjec... ADJECTIVES" />
-            <marker date="1518750196093" expanded="true" signature="3854:3898" placeholder="SELECT LOCAT... LOCATIONS" />
-            <marker date="1518750196093" expanded="true" signature="3854:3920" placeholder="SELECT LOCAT... LOCATIONS" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_manager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/map_builder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1878">
-          <caret line="88" column="36" selection-start-line="88" selection-start-column="36" selection-end-line="88" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <marker date="1519321016854" expanded="true" signature="5124:5223" placeholder="SELECT * FRO... objects" />
+            <element signature="e#0#23#0" expanded="false" />
+            <marker date="1519356209629" expanded="true" signature="2343:2403" placeholder="SELECT adjec... ADJECTIVES" />
+            <marker date="1519356209629" expanded="true" signature="3596:3656" placeholder="SELECT locat... LOCATIONS" />
+            <marker date="1519356209629" expanded="true" signature="4002:4046" placeholder="SELECT LOCAT... LOCATIONS" />
+            <marker date="1519356209629" expanded="true" signature="4002:4068" placeholder="SELECT LOCAT... LOCATIONS" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/game_manager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="108" column="49" selection-start-line="108" selection-start-column="49" selection-end-line="108" selection-end-column="49" />
+        <state relative-caret-position="2023">
+          <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3995">
+          <caret line="238" column="51" selection-start-line="238" selection-start-column="51" selection-end-line="238" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pathfinder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f1b76a18/4327ef47-c2e1-4e99-8f5d-4190de6a3742/OBJECT_DESCRIPTION">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f1b76a18/4327ef47-c2e1-4e99-8f5d-4190de6a3742/OBJECTS">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/371c1ad3-de00-4fd4-bf5e-f6ccb1cf80bb/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Original Map.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f1b76a18/4327ef47-c2e1-4e99-8f5d-4190de6a3742/ATTRIBUTE_COMPARATORS">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f1b76a18/4327ef47-c2e1-4e99-8f5d-4190de6a3742/ADJECTIVES">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f1b76a18/4327ef47-c2e1-4e99-8f5d-4190de6a3742/OBJECT_CATEGORIES">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f1b76a18/4327ef47-c2e1-4e99-8f5d-4190de6a3742/LOCATIONS">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f1b76a18/4327ef47-c2e1-4e99-8f5d-4190de6a3742/COMPARATORS">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f1b76a18/4327ef47-c2e1-4e99-8f5d-4190de6a3742/ATTRIBUTES">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f1b76a18/4327ef47-c2e1-4e99-8f5d-4190de6a3742/QUANTIFIERS">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f1b76a18/4327ef47-c2e1-4e99-8f5d-4190de6a3742/CATEGORIES">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/documentation/NEO DB ERD.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neo_body/memory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="180" column="30" selection-start-line="180" selection-start-column="30" selection-end-line="184" selection-end-column="16" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
+            <marker date="1519725433459" expanded="true" signature="1918:1992" placeholder="INSERT INTO OBJECTS... " />
+            <marker date="1519725433459" expanded="true" signature="2131:2195" placeholder="INSERT OR IG... ADJECTIVES" />
+            <marker date="1519725433459" expanded="true" signature="2374:2434" placeholder="SELECT adjec... ADJECTIVES" />
+            <marker date="1519725433459" expanded="true" signature="2624:2675" placeholder="SELECT objec... OBJECTS" />
+            <marker date="1519725433459" expanded="true" signature="2858:3007" placeholder="INSERT INTO OBJECT_DESCRIPTION... " />
+            <marker date="1519725433459" expanded="true" signature="3163:3210" placeholder="SELECT * FRO... OBJECTS" />
+            <marker date="1519725433459" expanded="true" signature="3651:3679" placeholder="DROP TABLE I... " />
+            <marker date="1519725433459" expanded="true" signature="3714:3923" placeholder="CREATE TABLE... OBJECTS" />
+            <marker date="1519725433459" expanded="true" signature="4032:4171" placeholder="CREATE TABLE... VERBS" />
+            <marker date="1519725433459" expanded="true" signature="4278:4436" placeholder="CREATE TABLE... QUANTIFIERS" />
+            <marker date="1519725433459" expanded="true" signature="4563:4594" placeholder="DROP TABLE I... " />
+            <marker date="1519725433459" expanded="true" signature="4629:4865" placeholder="CREATE TABLE... ADJECTIVES" />
+            <marker date="1519725433459" expanded="true" signature="4901:5080" placeholder="CREATE TABLE... ATTRIBUTES" />
+            <marker date="1519725433459" expanded="true" signature="5224:5436" placeholder="CREATE TABLE... COMPARATORS" />
+            <marker date="1519725433459" expanded="true" signature="5629:5860" placeholder="CREATE TABLE... ATTRIBUTE_COMPARATORS" />
+            <marker date="1519725433459" expanded="true" signature="5974:6151" placeholder="CREATE TABLE... CATEGORIES" />
+            <marker date="1519725433459" expanded="true" signature="6270:6483" placeholder="CREATE TABLE... OBJECT_CATEGORIES" />
+            <marker date="1519725433459" expanded="true" signature="6719:6758" placeholder="DROP TABLE I... " />
+            <marker date="1519725433459" expanded="true" signature="6793:7157" placeholder="CREATE TABLE... OBJECT_DESCRIPTION" />
+            <marker date="1519725433459" expanded="true" signature="7193:7544" placeholder="CREATE TABLE... LOCATIONS" />
+            <marker date="1519725433459" expanded="true" signature="7732:7753" placeholder="DROP TABLE I... " />
+            <marker date="1519725433459" expanded="true" signature="7732:7767" placeholder="DROP TABLE I... " />
+            <marker date="1519725433459" expanded="true" signature="7802:8066" placeholder="CREATE TABLE... OBJECT_DESCRIPTION" />
+            <marker date="1519725433459" expanded="true" signature="7802:8102" placeholder="CREATE TABLE... OBJECT_DESCRIPTION" />
+            <marker date="1519725433459" expanded="true" signature="8138:8343" placeholder="CREATE TABLE... VERB_CATEGORIES" />
+            <marker date="1519725433459" expanded="true" signature="9181:9242" placeholder="INSERT INTO OBJECTS... " />
+            <marker date="1519725433459" expanded="true" signature="9181:9277" placeholder="INSERT INTO OBJECTS... " />
+            <marker date="1519725433459" expanded="true" signature="9380:9403" placeholder="SELECT * FRO... LOCATIONS" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f1b76a18/4327ef47-c2e1-4e99-8f5d-4190de6a3742/ADJECTIVE_TYPE">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4327ef47-c2e1-4e99-8f5d-4190de6a3742/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f1b76a18/4327ef47-c2e1-4e99-8f5d-4190de6a3742/VERBS">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
