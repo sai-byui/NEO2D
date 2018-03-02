@@ -23,6 +23,13 @@ class Wernicke_Area(Agent):
         self.correct_syntax = True
         self.answer_unknown = False
         self.location_coordinates = None
+        self.cursor = None
+        self.next_behavior = None
+        # search variables
+        self.search_all = False
+        self.search_attribute_type = None
+        self.search_adjective = None
+        self.search_category = None
 
     def analyze_query(self):
         self.reset_variables()
@@ -69,6 +76,8 @@ class Wernicke_Area(Agent):
         if not self.qualifier_list:
                 self.answer_unknown = True
 
+        conn.close()
+
     def form_sql_statement(self):
         self.sql_statement = self.select_statement + self.from_statement + self.where_statement
 
@@ -89,31 +98,75 @@ class Wernicke_Area(Agent):
     def parse_command(self, command):
         self.location_list.clear()
         conn = sqlite3.connect('neo_test.db')
-        cursor = conn.cursor()
+        self.cursor = conn.cursor()
         word_array = command.split()
         for word in word_array:
-            if word == "search":
-                self.search_for_objects()
-                break
-            else:
-                cursor.execute("SELECT location_id FROM LOCATIONS WHERE location_name LIKE ?", (word.lower() + '%',))
-                result = cursor.fetchone()
-                if result:
-                    self.location_list.append(result[0])
-                    print(self.location_list[0])
-                    self.determine_location(cursor)
+            self.cursor.execute("SELECT FUNCTION_CALL FROM VERBS WHERE VERB_NAME LIKE ?", (word.lower() + '%',))
+            result = self.cursor.fetchone()
+            if result:
+                method = getattr(Wernicke_Area, result[0])
+                conn.close()
+                method(self, command)
+            # if word == "search":
+            #     self.search_for_objects()
+            #     break
+            # else:
+            #     cursor.execute("SELECT location_id FROM LOCATIONS WHERE location_name LIKE ?", (word.lower() + '%',))
+            #     result = cursor.fetchone()
+            #     if result:
+            #         self.location_list.append(result[0])
+            #         print(self.location_list[0])
+            #         self.determine_location(cursor)
 
 
-        conn.close()
 
-    def determine_location(self, cursor):
+
+    def go_to(self, command):
+        conn = sqlite3.connect('neo_test.db')
+        cursor = conn.cursor()
         cursor.execute("""SELECT LOCATION_X, LOCATION_Y FROM LOCATIONS WHERE LOCATION_ID = ?""", (self.location_list[0],))
         result = cursor.fetchone()
         self.location_coordinates = result
         print(result)
 
-    def search_for_objects(self):
-        pass
+    def search(self, command):
+        conn = sqlite3.connect('neo_test.db')
+        cursor = conn.cursor()
+        self.search_all = False
+        # this tells neo to start searching, see class BEHAVIOR_STATE in neo.py
+        self.next_behavior = 7
+        word_array = command.split()
+        for word in word_array:
+            cursor.execute("""SELECT ATTRIBUTE_NAME
+                          FROM ATTRIBUTES a JOIN ADJECTIVE_TYPE at ON a.ATTRIBUTE_ID = at.ATTRIBUTE_ID
+                          JOIN ADJECTIVES ad ON ad.ADJECTIVE_ID = at.ADJECTIVE_ID
+                          WHERE ADJECTIVE_NAME = ?""", (word.lower(),))
+            result = cursor.fetchone()
+            if result:
+                self.search_attribute_type = result[0]
+                self.search_adjective = word
+
+            if word.lower() == 'object' or word.lower == 'objects':
+                self.search_all = True
+                break
+
+            if self.search_all == False:
+                cursor.execute("""SELECT OBJECT_NAME FROM OBJECTS WHERE OBJECT_NAME = ?""", (word.lower(),))
+                object = cursor.fetchone()
+                if object:
+                    self.search_category = object[0]
+        print("adjective: {} Attribute: {} category: {}".format(self.search_adjective, self.search_attribute_type, self.search_category))
+        conn.close()
+
+
+
+
+
+
+
+    def null_function(self):
+        print("successfully called function")
+        self.location_coordinates = (500, 200)
 
 
 

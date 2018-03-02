@@ -234,11 +234,11 @@ class NEO(Agent):
             if key[pygame.K_c]:
                 command = input("Enter a command to run")
                 self.wernicke_area.parse_command(command)
-                location_coordinates = self.ask("wernicke_area", "location_coordinates")
+                # location_coordinates = self.ask("wernicke_area", "location_coordinates")
                 self.update_coordinates()
                 # to do: add division between tasks
-                self.path_course = self.pathfinder.find_path(location_coordinates)
-                self.current_behavior = BEHAVIOR_STATE.PATH_FINDING
+                # self.path_course = self.pathfinder.find_path(location_coordinates)
+                # self.current_behavior = BEHAVIOR_STATE.PATH_FINDING
                 # print(self.path_course)
         elif self.current_behavior == BEHAVIOR_STATE.PATH_FINDING:
             if not self.path_course:

@@ -153,12 +153,10 @@ class MapBuilder(Agent):
             x = 0
 
     def insert_objects(self):
-        test_object = Object('apple', 'red', 1, 450, 375, 'apple.png')
+        test_object = Object('apple', 'green', 1, 450, 375, 'green_apple.jpg')
         self.object_list.add(test_object)  # insert test object into environment
         test_object2 = Object('apple', 'red', 1, 600, 375, 'apple.png')
         self.object_list.add(test_object2)  # insert test object into environment
-        test_object3 = Object('apple', 'red', 1, 400, 200, 'apple.png')
-        self.object_list.add(test_object3)  # insert test object into environment
 
         # There's a problem where NEO does not check behind objects - i.e., the 3 above
 
