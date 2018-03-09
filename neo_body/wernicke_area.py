@@ -2,6 +2,7 @@ from agent import Agent
 import sqlite3
 
 
+
 class Wernicke_Area(Agent):
     """This agent forms the query from natural language into SQL.
      Sentences are searched for key words such as attributes(ex. "red")
@@ -30,6 +31,9 @@ class Wernicke_Area(Agent):
         self.search_attribute_type = None
         self.search_adjective = None
         self.search_category = None
+
+        #tracks behavior based on command passed
+        self.next_behavior = None
 
     def analyze_query(self):
         self.reset_variables()
@@ -98,15 +102,16 @@ class Wernicke_Area(Agent):
     def parse_command(self, command):
         self.location_list.clear()
         conn = sqlite3.connect('neo_test.db')
-        self.cursor = conn.cursor()
+        cursor = conn.cursor()
         word_array = command.split()
         for word in word_array:
-            self.cursor.execute("SELECT FUNCTION_CALL FROM VERBS WHERE VERB_NAME LIKE ?", (word.lower() + '%',))
-            result = self.cursor.fetchone()
+            cursor.execute("SELECT FUNCTION_CALL FROM VERBS WHERE VERB_NAME LIKE ?", (word.lower() + '%',))
+            result = cursor.fetchone()
             if result:
                 method = getattr(Wernicke_Area, result[0])
                 conn.close()
                 method(self, command)
+                break
             # if word == "search":
             #     self.search_for_objects()
             #     break
@@ -127,6 +132,8 @@ class Wernicke_Area(Agent):
         cursor.execute("""SELECT LOCATION_X, LOCATION_Y FROM LOCATIONS WHERE LOCATION_ID = ?""", (self.location_list[0],))
         result = cursor.fetchone()
         self.location_coordinates = result
+        self.next_behavior = 8
+
         print(result)
 
     def search(self, command):
@@ -146,7 +153,7 @@ class Wernicke_Area(Agent):
                 self.search_attribute_type = result[0]
                 self.search_adjective = word
 
-            if word.lower() == 'object' or word.lower == 'objects':
+            if word.lower() == 'object' or word.lower() == 'objects':
                 self.search_all = True
                 break
 
@@ -156,6 +163,7 @@ class Wernicke_Area(Agent):
                 if object:
                     self.search_category = object[0]
         print("adjective: {} Attribute: {} category: {}".format(self.search_adjective, self.search_attribute_type, self.search_category))
+        self.next_behavior = 7
         conn.close()
 
 

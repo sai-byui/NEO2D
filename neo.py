@@ -88,6 +88,10 @@ class NEO(Agent):
         self.pathfinder = Pathfinder()
         self.running_training = True
 
+        #search variables
+        self.rotating_counter = 0
+        self.location_coordinates = self.ask("memory", "location_coordinates")
+
         self.sql_statement = None
 
     def act_out_decision(self):
@@ -236,6 +240,8 @@ class NEO(Agent):
                 self.wernicke_area.parse_command(command)
                 # location_coordinates = self.ask("wernicke_area", "location_coordinates")
                 self.update_coordinates()
+                self.current_behavior = self.ask("wernicke_area", "next_behavior")
+                self.current_behavior = BEHAVIOR_STATE(7)
                 # to do: add division between tasks
                 # self.path_course = self.pathfinder.find_path(location_coordinates)
                 # self.current_behavior = BEHAVIOR_STATE.PATH_FINDING
@@ -250,6 +256,31 @@ class NEO(Agent):
                 self.find_next_node()
                 self.move_to_next_node()
 
+    def search_for(self):
+
+        self.legs.rotate()
+        self.rotating_counter += 1
+        self.angle = self.ask("legs", "angle")
+        if self.rotating_counter > 360:
+            self.rotating_counter = 0
+            self.current_behavior = BEHAVIOR_STATE.SWITCHING_ROOMS
+        else:
+            self.eyes.scan_room()
+            self.current_behavior = BEHAVIOR_STATE.SEARCHING
+
+    def update_search(self):
+        if self.current_behavior == BEHAVIOR_STATE.SEARCHING:
+            self.search_for()
+        elif self.current_behavior == BEHAVIOR_STATE.SWITCHING_ROOMS:
+            self.go_to_room()
+
+    def go_to_room(self):
+        if self.path_course is None:
+            self.path_course = self.pathfinder.find_path(self.location_coordinates[0])
+            self.location_coordinates.pop(0)
+        else:
+            self.next_node_coordinates = (self.path_course[0].x, self.path_course[0].y)
+            self.move_to_next_node()
 
 
     def setup_bot_map(self):
@@ -293,3 +324,5 @@ class BEHAVIOR_STATE(Enum):
     FINISHED = 4
     PATH_FINDING = 5
     TRAINING = 6
+    SEARCHING = 7
+    SWITCHING_ROOMS = 8

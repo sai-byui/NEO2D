@@ -26,7 +26,9 @@ class Memory(Agent):
         self.current_row_index = 1
         self.colors = {}
         self.weights = {}
+        self.location_coordinates = []
         self.create_object_memory()
+        self.get_location_tuples()
 
     def memorize(self):
         """Writes the attributes of the current object to the database"""
@@ -198,6 +200,16 @@ class Memory(Agent):
 
         self.short_term_memory = cursor.fetchall()
         conn.close()
+
+    def get_location_tuples(self):
+        conn = sqlite3.connect('neo_test.db')
+        cursor = conn.cursor()
+
+        cursor.execute("""SELECT LOCATION_X, LOCATION_Y FROM LOCATIONS""")
+        self.location_coordinates = cursor.fetchall()
+        conn.close()
+
+
 
     def save_location(self, location_name):
         # get the x and y coordinates from the legs class

@@ -7,6 +7,7 @@ from blue_player_pilot import BluePlayerPilot
 from environment import Environment
 from map_builder import MapBuilder
 from neo import NEO
+from neo import BEHAVIOR_STATE
 
 # event values for handling during game play
 SHOOTING = pygame.USEREVENT + 1
@@ -125,7 +126,10 @@ class GameManager(Agent):
     def run_game(self):
         """calls the player agent's to perform their moves and check's for bullet movement"""
         self.check_pygame_events()
-        self.neo.make_decision()
+        if self.neo.current_behavior == BEHAVIOR_STATE.SEARCHING:
+            self.neo.update_search()
+        else:
+            self.neo.make_decision()
         self.blue_player_pilot.check_input_for_actions()
         self.check_bullet_collisions()
         self.draw()
