@@ -84,9 +84,8 @@ class NEO(Agent):
         self.detected_objects = []
         self.uninspected_objects = []
 
-        self.current_behavior = BEHAVIOR_STATE.SCANNING
+        self.current_behavior = BEHAVIOR_STATE.TRAINING
         self.pathfinder = Pathfinder()
-        self.running_training = True
 
         #search variables
         self.rotating_counter = 0
@@ -102,17 +101,6 @@ class NEO(Agent):
         self.distance_from_object = \
             abs(self.object_coordinates[0] - self.red_coordinate[0]) + \
             abs(self.object_coordinates[1] - self.red_coordinate[1])
-
-    def determine_behavior(self):
-        if self.inspecting:
-            self.current_behavior = BEHAVIOR_STATE.INSPECTING
-        elif self.uninspected_objects and not self.path_found:
-            self.current_behavior = BEHAVIOR_STATE.PATH_FINDING
-            self.current_object = self.uninspected_objects[0]
-        elif self.path_found:
-            self.current_behavior = BEHAVIOR_STATE.APPROACHING
-        else:
-            self.current_behavior = BEHAVIOR_STATE.SCANNING
 
     def determine_object_position(self):
         """"used to determine which direction the red player should turn to face object"""
@@ -134,8 +122,7 @@ class NEO(Agent):
     def filter_detected_objects(self):
         """Decides whether detected objects(currently just 1 at a time) have been inspected before"""
         for obj in self.detected_objects:
-            self.sql_statement = "SELECT * FROM objects WHERE object_x_pos = " + str(obj.x) + \
-                " AND object_y_pos = " + str(obj.y)
+            self.sql_statement = "SELECT * FROM objects"
             self.memory.recall_objects()
             if self.ask("memory", "short_term_memory"):
                 self.detected_objects.remove(obj)
@@ -156,38 +143,49 @@ class NEO(Agent):
 
     def make_decision(self):
         """Acts out decisions based on the current behavior state"""
-        if not self.running_training:
-            self.filter_detected_objects()
-            self.determine_behavior()
-            if self.current_behavior == BEHAVIOR_STATE.SCANNING:
-                self.legs.rotate()
-                self.angle = self.ask("legs", "angle")
-                self.eyes.scan_room()
-                # _thread.start_new_thread(self.mouth.speak, ("Scanning Room",))
-            elif self.current_behavior == BEHAVIOR_STATE.PATH_FINDING:
-                self.path_course = self.pathfinder.find_path(self.object_coordinates)
-                self.path_found = True
-                self.next_node_coordinates = (self.path_course[0].x, self.path_course[0].y)
-            elif self.current_behavior == BEHAVIOR_STATE.APPROACHING:
-                if not self.path_course:
-                    self.path_found = False
-                    self.inspecting = True
-                    return
-                self.find_next_node()
-                self.move_to_next_node()
-            elif self.current_behavior == BEHAVIOR_STATE.INSPECTING:
-                # if not self.mouth.inspection_message_spoken:
-                #     self.mouth.stopSentence()
-                #     _thread.start_new_thread(self.mouth.speak, ("Inspecting Object",))
-                #     self.mouth.inspection_message_spoken = True
-                self.eyes.look_at_object()
-                self.hands.pick_up_object()
-                self.memory.memorize()
-                self.inspecting = False
-                self.uninspected_objects.remove(self.current_object)
-                self.current_object = None
-        else:
+        if self.current_behavior == BEHAVIOR_STATE.TRAINING:
             self.run_training()
+        elif self.current_behavior == BEHAVIOR_STATE.SEARCHING:
+            self.update_search()
+        elif self.current_behavior == BEHAVIOR_STATE.SWITCHING_ROOMS:
+            self.go_to_room()
+        elif self.current_behavior == BEHAVIOR_STATE.SCANNING:
+            self.scan_room()
+        elif self.current_behavior == BEHAVIOR_STATE.PATH_FINDING:
+            pass
+
+        # if not self.running_training:
+        #     self.filter_detected_objects()
+        #     self.determine_behavior()
+        #     if self.current_behavior == BEHAVIOR_STATE.SCANNING:
+        #         self.legs.rotate()
+        #         self.angle = self.ask("legs", "angle")
+        #         self.eyes.scan_room()
+        #         # _thread.start_new_thread(self.mouth.speak, ("Scanning Room",))
+        #     elif self.current_behavior == BEHAVIOR_STATE.PATH_FINDING:
+        #         self.path_course = self.pathfinder.find_path(self.object_coordinates)
+        #         self.path_found = True
+        #         self.next_node_coordinates = (self.path_course[0].x, self.path_course[0].y)
+        #     elif self.current_behavior == BEHAVIOR_STATE.APPROACHING:
+        #         if not self.path_course:
+        #             self.path_found = False
+        #             self.inspecting = True
+        #             return
+        #         self.find_next_node()
+        #         self.move_to_next_node()
+        #     elif self.current_behavior == BEHAVIOR_STATE.INSPECTING:
+        #         # if not self.mouth.inspection_message_spoken:
+        #         #     self.mouth.stopSentence()
+        #         #     _thread.start_new_thread(self.mouth.speak, ("Inspecting Object",))
+        #         #     self.mouth.inspection_message_spoken = True
+        #         self.eyes.look_at_object()
+        #         self.hands.pick_up_object()
+        #         self.memory.memorize()
+        #         self.inspecting = False
+        #         self.uninspected_objects.remove(self.current_object)
+        #         self.current_object = None
+        # else:
+        #     self.run_training()
 
     def move_to_next_node(self):
         """tells the bot which direction to move to reach the next node in its path"""
@@ -201,24 +199,6 @@ class NEO(Agent):
             self.bot.move(0, -2)
         elif self.next_node_coordinates[1] > self.rect.centery:
             self.bot.move(0, 2)
-
-    # def rotate(self): Use the one in legs.py instead
-    #     self.angle += .5
-    #     key = pygame.key.get_pressed()
-    #     if key[pygame.K_LEFT]:
-    #         self.angle += 4
-    #     if key[pygame.K_RIGHT]:
-    #         self.angle -= 4
-    #     # self.angle += 2
-    #     self.angle %= 360
-    #     self.bot.angle_facing = self.angle
-    #     self.bot.update_dx_dy()
-    #
-    #     rect_center = self.bot.image.get_rect()
-    #     self.bot.image = pygame.transform.rotozoom(self.original_image, self.angle, 1)
-    #     rot_rect = rect_center.copy()
-    #     rot_rect.center = self.bot.image.get_rect().center
-    #     self.bot.image = self.bot.image.subsurface(rot_rect).copy()
 
     def run_training(self):
         if self.current_behavior != BEHAVIOR_STATE.PATH_FINDING:
@@ -241,20 +221,7 @@ class NEO(Agent):
                 # location_coordinates = self.ask("wernicke_area", "location_coordinates")
                 self.update_coordinates()
                 self.current_behavior = self.ask("wernicke_area", "next_behavior")
-                self.current_behavior = BEHAVIOR_STATE(7)
-                # to do: add division between tasks
-                # self.path_course = self.pathfinder.find_path(location_coordinates)
-                # self.current_behavior = BEHAVIOR_STATE.PATH_FINDING
-                # print(self.path_course)
-        elif self.current_behavior == BEHAVIOR_STATE.PATH_FINDING:
-            if not self.path_course:
-                self.path_found = False
-                self.current_behavior = BEHAVIOR_STATE.TRAINING
-                return
-            else:
-                self.next_node_coordinates = (self.path_course[0].x, self.path_course[0].y)
-                self.find_next_node()
-                self.move_to_next_node()
+                self.current_behavior = BEHAVIOR_STATE(self.current_behavior)
 
     def search_for(self):
 
@@ -277,10 +244,16 @@ class NEO(Agent):
     def go_to_room(self):
         if self.path_course is None:
             self.path_course = self.pathfinder.find_path(self.location_coordinates[0])
+            # remove the room we are moving towards from the list of rooms we have visited
             self.location_coordinates.pop(0)
         else:
             self.next_node_coordinates = (self.path_course[0].x, self.path_course[0].y)
             self.move_to_next_node()
+
+    def scan_room(self):
+        self.legs.rotate()
+        self.angle = self.ask("legs", "angle")
+        self.eyes.scan_room()
 
 
     def setup_bot_map(self):

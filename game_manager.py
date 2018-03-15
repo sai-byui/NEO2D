@@ -86,6 +86,7 @@ class GameManager(Agent):
                 # _thread.start_new_thread(self.neo.mouth.identify_detected_object, (sentence,))
                 self.neo.object_coordinates = (obj.rect.x, obj.rect.y)
                 self.neo.detected_objects += [obj.meta]
+                # self.neo.current_behavior = BEHAVIOR_STATE.APPROACHING
                 self.bullet_list.remove(bullet)
 
     def check_wall_bullet_collision(self, bullet):
@@ -105,9 +106,9 @@ class GameManager(Agent):
             if e.type == pygame.KEYDOWN and e.key == pygame.K_ESCAPE:
                 self.running_game = False
             if e.type == pygame.KEYDOWN and e.key == pygame.K_t:
-                self.neo.running_training = True
+                self.neo.current_behavior = BEHAVIOR_STATE.TRAINING
             if e.type == pygame.KEYDOWN and e.key == pygame.K_s:
-                self.neo.running_training = False
+                self.neo.current_behavior = BEHAVIOR_STATE.SCANNING
 
     def draw(self):
         """displays the game images on the screen"""
@@ -126,10 +127,7 @@ class GameManager(Agent):
     def run_game(self):
         """calls the player agent's to perform their moves and check's for bullet movement"""
         self.check_pygame_events()
-        if self.neo.current_behavior == BEHAVIOR_STATE.SEARCHING:
-            self.neo.update_search()
-        else:
-            self.neo.make_decision()
+        self.neo.make_decision()
         self.blue_player_pilot.check_input_for_actions()
         self.check_bullet_collisions()
         self.draw()
