@@ -4,9 +4,9 @@ import sqlite3
 
 
 class Wernicke_Area(Agent):
-    """This agent forms the query from natural language into SQL.
-     Sentences are searched for key words such as attributes(ex. "red")
-     that neo recognizes in its database. It then finds each object that contains that attribute."""
+    """This agent translates queries from natural language into SQL.
+     Sentences are searched for key words such as adjectives and attributes(ex. "red": color)
+     that neo recognizes in its database."""
 
     def __init__(self):
         """default constructor"""
@@ -166,15 +166,9 @@ class Wernicke_Area(Agent):
         self.next_behavior = 7
         conn.close()
 
-
-
-
-
-
-
-    def null_function(self):
-        print("successfully called function")
-        self.location_coordinates = (500, 200)
+    # def null_function(self):
+    #     print("successfully called function")
+    #     self.location_coordinates = (500, 200)
 
 
 

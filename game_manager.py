@@ -86,7 +86,12 @@ class GameManager(Agent):
                 # _thread.start_new_thread(self.neo.mouth.identify_detected_object, (sentence,))
                 self.neo.object_coordinates = (obj.rect.x, obj.rect.y)
                 self.neo.detected_objects += [obj.meta]
-                # self.neo.current_behavior = BEHAVIOR_STATE.APPROACHING
+                if self.neo.current_behavior == BEHAVIOR_STATE.SCANNING:
+                    # self.neo.current_behavior = BEHAVIOR_STATE.APPROACHING
+                    pass
+                else:
+                    self.neo.determine_object_match()
+
                 self.bullet_list.remove(bullet)
 
     def check_wall_bullet_collision(self, bullet):
