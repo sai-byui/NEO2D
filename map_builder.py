@@ -13,7 +13,7 @@ class MapBuilder(Agent):
         self.object_list = self.environment.get_object("object_list")
         self.map_with_nodes = []  # the map list that will have node positions inserted into it.
         self.node_list = []  # the list of each node found in our map
-        self.node_step = 6  # determines how many spaces are between each node in the graph
+        self.node_step = 2  # determines how many spaces are between each node in the graph
         self.GRID_INCREMENT = 12  # determines how much space is between wall blocks and nodes
         self.screen_width = self.ask("game_manager", "screen_width")
 
@@ -27,6 +27,7 @@ class MapBuilder(Agent):
                 line_list.append(letter)
             # print(line_list)
             multidimensional_map_array.append(line_list)
+            print(line_list)
         return multidimensional_map_array
 
     def create_node_graph(self):
@@ -98,7 +99,7 @@ class MapBuilder(Agent):
                 # node. If there are no walls in between, then the path is clear and we can add the node to our list of
                 # connections.
                 while counter <= self.node_step:
-                    if multidimensional_array_map[y + dy][x + dx] != 'W':
+                    if multidimensional_array_map[y + dy][x + dx] != 'W' and multidimensional_array_map[y + dy][x + dx] != 'O':
                         if counter != self.node_step:
                             dy += inc_dy
                             dx += inc_dx
@@ -125,13 +126,14 @@ class MapBuilder(Agent):
                 letter_list = []
                 for x, letter in enumerate(line):
 
-                    if x % self.node_step == 0 and letter != 'W':
+                    if x % self.node_step == 0 and letter != "W" and letter != "O":
                         letter = 'N'
                     letter_list.append(letter)
                 node_line = ''.join(letter_list)
                 self.map_with_nodes.append(node_line)
             else:
                 self.map_with_nodes.append(line)
+
 
     def build_arena(self):
         self.construct_walls()
@@ -153,7 +155,7 @@ class MapBuilder(Agent):
             x = 0
 
     def insert_objects(self):
-        test_object = Object('apple', 'green', 1, 450, 375, 'green_apple.jpg')
+        test_object = Object('apple', 'green', 1, 1000, 375, 'green_apple.jpg')
         self.object_list.add(test_object)  # insert test object into environment
         test_object2 = Object('apple', 'red', 1, 600, 375, 'apple.png')
         self.object_list.add(test_object2)  # insert test object into environment
