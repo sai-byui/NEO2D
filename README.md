@@ -10,6 +10,8 @@ environment. For this semester project Neo will be moving within a 2D visual env
 
 If you would like to read a high level description of the natural language aspect of the project and it's various components, please see the [NEO NLP Project Documentation.docx](https://github.com/sai-byui/NEO2D/blob/master/documentation/NEO%20NLP%20Project%20Documentation.docx) file in this repo. 
 
+#### You can also view a video presentation about the project and Neo's DB framework here https://www.youtube.com/watch?v=bjk3Kt3RUkE
+
 This program runs off of python 3.6+ code. You will need to install 3.6 or higher to run the project.
 The project also uses the pygame library to create the visuals and pyttsx3 to generate Neo's voice. Both libraries will need to be 
 installed to run NEO2D.
